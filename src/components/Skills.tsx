@@ -103,27 +103,28 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-lift perspective-1000 transform-3d animate-fade-in-up"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-gray-50 rounded-lg mr-4">
+                <div className="p-3 bg-gray-50 rounded-lg mr-4 hover-tilt animate-float">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-xl font-bold text-gray-900 gradient-text">
                   {category.title}
                 </h3>
               </div>
 
               <div className="space-y-4">
                 {category.skills.map((skill, idx) => (
-                  <div key={idx}>
+                  <div key={idx} className="hover-lift">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-700 font-medium">{skill.name}</span>
                       <span className="text-gray-500 text-sm">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out animate-glow"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -143,9 +144,10 @@ const Skills = () => {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-600"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-blue-600 hover-lift animate-fade-in-up"
+                style={{ animationDelay: `${index * 200}ms` }}
               >
-                <h4 className="text-lg font-bold text-gray-900 mb-2">
+                <h4 className="text-lg font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-300">
                   {cert.title}
                 </h4>
                 <p className="text-blue-600 font-semibold mb-2">{cert.issuer}</p>
@@ -157,16 +159,16 @@ const Skills = () => {
         </div>
 
         {/* LeetCode Stats */}
-        <div className="mt-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-8 text-white text-center">
+        <div className="mt-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-8 text-white text-center hover-tilt perspective-1000 animate-glow">
           <h3 className="text-2xl font-bold mb-4">Competitive Programming</h3>
-          <div className="flex justify-center items-center space-x-8">
+          <div className="flex justify-center items-center space-x-8 animate-fade-in-up">
             <div>
-              <div className="text-4xl font-bold">1434</div>
+              <div className="text-4xl font-bold animate-float">1434</div>
               <div className="text-orange-100">LeetCode Rating</div>
             </div>
             <div className="w-px h-16 bg-orange-300"></div>
             <div>
-              <div className="text-4xl font-bold">4056</div>
+              <div className="text-4xl font-bold animate-float animation-delay-400">4056</div>
               <div className="text-orange-100">EAPCET Rank</div>
             </div>
           </div>
@@ -174,7 +176,7 @@ const Skills = () => {
             href="https://leetcode.com/u/S_RAMA_SHESHA_SAI/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold"
+            className="inline-block mt-6 px-6 py-3 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold hover:scale-105 hover-tilt"
           >
             View LeetCode Profile
           </a>

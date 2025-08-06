@@ -65,41 +65,44 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden group animate-fade-in-up"
+              className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden group animate-fade-in-up hover-tilt perspective-1000 transform-3d"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-blue-100 text-blue-600 rounded-lg mr-4">
+              <div className="p-6 relative">
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                
+                <div className="flex items-center mb-4 relative z-10">
+                  <div className="p-3 bg-blue-100 text-blue-600 rounded-lg mr-4 hover-lift animate-float">
                     {project.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                     {project.title}
                   </h3>
                 </div>
 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 mb-4 line-clamp-3 relative z-10">
                   {project.description}
                 </p>
 
-                <div className="mb-4">
+                <div className="mb-4 relative z-10">
                   <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     {project.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0 animate-pulse"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6 relative z-10">
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
+                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200 hover:scale-105"
                       >
                         {tech}
                       </span>
@@ -107,17 +110,17 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 relative z-10">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all duration-200 text-sm font-medium hover:scale-105 hover-tilt"
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </a>
-                  <button className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-sm font-medium">
+                  <button className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 text-sm font-medium hover:scale-105 hover-tilt">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Details
                   </button>

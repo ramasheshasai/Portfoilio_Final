@@ -35,23 +35,23 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 animate-slide-up">
               Passionate About Innovation & Technology
             </h3>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
+            <div className="space-y-4 text-gray-700 leading-relaxed animate-fade-in-up">
+              <p className="hover-lift">
                 I'm Satuluri Rama Shesha Sai, a final-year Computer Science Engineering student at 
                 SRM University-AP, with a strong CGPA of 9.12. Currently working as a Product Management 
                 Intern at Flam, I bring a well-rounded background in software development, research, 
                 and cross-functional collaboration.
               </p>
-              <p>
+              <p className="hover-lift animation-delay-200">
                 With proficiency in C, C++, Python, HTML, CSS, JavaScript, and a solid grounding in 
                 Data Structures and Algorithms, I enjoy building scalable, user-focused solutions and 
                 exploring innovative approaches in tech. My projects range from full-stack web applications 
                 to energy harvesting research, reflecting both technical versatility and creative thinking.
               </p>
-              <p>
+              <p className="hover-lift animation-delay-400">
                 I thrive in fast-paced, learning-intensive environments and enjoy collaborating with 
                 multidisciplinary teams to bring impactful ideas to life. With over 500+ connections 
                 and growing engagement on platforms like LinkedIn, I'm actively exploring new opportunities 
@@ -64,10 +64,11 @@ const About = () => {
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow duration-300"
+                className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover-lift animate-fade-in-up perspective-1000"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="mb-4">{highlight.icon}</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="mb-4 animate-float">{highlight.icon}</div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-300">
                   {highlight.title}
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -78,21 +79,21 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-2">9.12</div>
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center animate-fade-in-up">
+          <div className="p-6 hover-lift">
+            <div className="text-3xl font-bold text-blue-600 mb-2 animate-float">9.12</div>
             <div className="text-gray-600">CGPA</div>
           </div>
-          <div className="p-6">
-            <div className="text-3xl font-bold text-green-600 mb-2">1434</div>
+          <div className="p-6 hover-lift animation-delay-200">
+            <div className="text-3xl font-bold text-green-600 mb-2 animate-float animation-delay-200">1434</div>
             <div className="text-gray-600">LeetCode Rating</div>
           </div>
-          <div className="p-6">
-            <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
+          <div className="p-6 hover-lift animation-delay-400">
+            <div className="text-3xl font-bold text-purple-600 mb-2 animate-float animation-delay-400">500+</div>
             <div className="text-gray-600">LinkedIn Connections</div>
           </div>
-          <div className="p-6">
-            <div className="text-3xl font-bold text-orange-600 mb-2">2+</div>
+          <div className="p-6 hover-lift animation-delay-600">
+            <div className="text-3xl font-bold text-orange-600 mb-2 animate-float animation-delay-600">2+</div>
             <div className="text-gray-600">Years Experience</div>
           </div>
         </div>

@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.netlify.app) *(Will be updated after deployment)*
+[View Live Portfolio](https://scintillating-kangaroo-f82849.netlify.app)
 
 ## 📋 Table of Contents
 
@@ -133,7 +133,24 @@ portfolio-website/
 
 ### Deploy to Netlify (Recommended)
 
-1. **Build the project**
+#### Option 1: Using Bolt.new (Automated)
+
+This portfolio was deployed using Bolt.new's integrated deployment system:
+
+1. **Automatic Build & Deploy**
+   - Bolt.new automatically builds the project using `npm run build`
+   - The `dist` folder is automatically deployed to Netlify
+   - No manual configuration required
+
+2. **Live URL**: https://scintillating-kangaroo-f82849.netlify.app
+
+3. **Claim Your Site** (Optional)
+   - Use the provided claim URL to transfer the site to your Netlify account
+   - This gives you full control over the deployment settings
+
+#### Option 2: Manual Deployment
+
+1. **Build the project manually**
    ```bash
    npm run build
    ```
@@ -182,6 +199,46 @@ portfolio-website/
    ```
 
 ## 🎨 Customization
+
+### Animations & Effects
+
+The portfolio includes several advanced animation techniques:
+
+#### CSS Animations
+- **Fade In**: Smooth entrance animations for sections
+- **Slide Up**: Elements slide up from bottom with staggered delays
+- **Hover Effects**: Interactive hover states with scale and shadow transitions
+- **Pulse Effects**: Subtle pulsing animations for call-to-action elements
+
+#### 3D Scroll Effects
+- **Parallax Scrolling**: Background elements move at different speeds
+- **Transform Animations**: Elements rotate, scale, and translate during scroll
+- **Intersection Observer**: Animations trigger when elements enter viewport
+- **Smooth Scrolling**: Native CSS smooth scrolling between sections
+
+#### Interactive Elements
+- **Card Hover Effects**: 3D transforms on project and skill cards
+- **Button Animations**: Micro-interactions with scale and color transitions
+- **Progress Bars**: Animated skill level indicators
+- **Typing Effects**: Dynamic text animations in hero section
+
+#### Implementation Details
+```css
+/* Custom animations defined in src/index.css */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* 3D transforms on hover */
+.hover:scale-105 {
+  transform: scale(1.05);
+}
+
+/* Staggered animation delays */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+```
 
 ### Personal Information
 
@@ -252,6 +309,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
+- [Bolt.new](https://bolt.new/) - Automated deployment platform
 - [React](https://reactjs.org/) - Frontend framework
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [Lucide React](https://lucide.dev/) - Beautiful icons
