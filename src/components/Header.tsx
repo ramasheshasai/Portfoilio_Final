@@ -28,25 +28,12 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium hover:scale-105"
               >
                 {item.name}
               </a>
             ))}
           </nav>
-
-          {/* Resume Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="/Resume_Rama_Shesha_Sai.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </a>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -71,15 +58,6 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <a
-                href="/Resume_Rama_Shesha_Sai.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 w-fit"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Resume
-              </a>
             </nav>
           </div>
         )}

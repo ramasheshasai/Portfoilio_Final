@@ -125,20 +125,31 @@ const Contact = () => {
             </div>
 
             {/* Resume Download */}
-            <div className="mt-8 p-6 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl text-white">
-              <h4 className="text-lg font-semibold mb-2">Download My Resume</h4>
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl text-white animate-pulse-slow">
+              <h4 className="text-lg font-semibold mb-2">Let's Build Something Amazing</h4>
               <p className="text-blue-100 mb-4">
-                Get a comprehensive overview of my experience, skills, and achievements.
+                I'm always excited to work on innovative projects and collaborate with talented teams.
               </p>
-              <a
-                href="/Resume_Rama_Shesha_Sai.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Download Resume
-              </a>
+              <div className="flex space-x-4">
+                <a
+                  href="https://github.com/ramasheshasai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold"
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ramasheshasai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold"
+                >
+                  <Linkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
 

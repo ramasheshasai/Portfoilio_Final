@@ -5,59 +5,43 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          <div className="mb-8">
-            <img
-              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-              alt="Satuluri Rama Shesha Sai"
-              className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-lg"
-            />
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <div className="text-center animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-slide-up">
             Satuluri Rama Shesha Sai
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-up animation-delay-200">
             Product Management Intern @Flam | Hackathon Winner @BITS-Hyderabad | 
             4th Year CSE SRM AP - CGPA 9.12
           </p>
           
-          <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up animation-delay-400">
             Final-year Computer Science Engineering student with expertise in product management, 
             full-stack development, and research. Passionate about building scalable, user-focused 
             solutions and exploring innovative approaches in tech.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up animation-delay-600">
             <a
               href="#projects"
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold"
+              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 font-semibold"
+              className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
             >
               Contact Me
             </a>
-            <a
-              href="/Resume_Rama_Shesha_Sai.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200 font-semibold"
-            >
-              Download Resume
-            </a>
           </div>
 
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-6 animate-slide-up animation-delay-800">
             <a
               href="https://github.com/ramasheshasai"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors duration-200"
+              className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -65,7 +49,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/ramasheshasai"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
+              className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -73,19 +57,19 @@ const Hero = () => {
               href="https://leetcode.com/u/S_RAMA_SHESHA_SAI/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200"
+              className="p-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <ExternalLink className="w-6 h-6" />
             </a>
             <a
               href="mailto:ramasheshasai_s@srmap.edu.in"
-              className="p-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-200"
+              className="p-3 bg-green-600 text-white rounded-full hover:bg-green-700 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Mail className="w-6 h-6" />
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-600 animate-slide-up animation-delay-1000">
             <div className="flex items-center">
               <Mail className="w-4 h-4 mr-2" />
               ramasheshasai_s@srmap.edu.in

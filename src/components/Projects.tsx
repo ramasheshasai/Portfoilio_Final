@@ -15,7 +15,7 @@ const Projects = () => {
         "Shopping cart functionality",
         "Order management system"
       ],
-      github: "https://github.com/ramasheshasai",
+      github: "https://github.com/ramasheshasai/book_bazar",
       icon: <Database className="w-8 h-8" />
     },
     {
@@ -30,7 +30,7 @@ const Projects = () => {
         "Optimized state management",
         "Fast loading times"
       ],
-      github: "https://github.com/ramasheshasai",
+      github: "https://github.com/ramasheshasai/news_website",
       icon: <Globe className="w-8 h-8" />
     },
     {
@@ -45,7 +45,7 @@ const Projects = () => {
         "Rigorous input validation",
         "Mathematical heuristics for edge cases"
       ],
-      github: "https://github.com/ramasheshasai",
+      github: "https://github.com/ramasheshasai/Weekday-Engine",
       icon: <Code className="w-8 h-8" />
     }
   ];
@@ -65,7 +65,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden group animate-fade-in-up"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="p-6">
                 <div className="flex items-center mb-4">
