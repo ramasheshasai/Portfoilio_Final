@@ -64,10 +64,10 @@ const About = () => {
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
+                className="p-6 bg-gray-50 rounded-xl"
               >
                 <div className="mb-4">{highlight.icon}</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-300">
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   {highlight.title}
                 </h4>
                 <p className="text-gray-600 text-sm">

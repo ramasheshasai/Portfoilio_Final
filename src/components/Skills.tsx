@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Globe, Database, Wrench, Brain, Users } from 'lucide-react';
+import { Code, Globe, Wrench, Brain, Users } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -103,13 +103,13 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-xl shadow-lg p-6"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gray-50 rounded-lg mr-4">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 gradient-text">
+                <h3 className="text-xl font-bold text-gray-900">
                   {category.title}
                 </h3>
               </div>
@@ -123,7 +123,7 @@ const Skills = () => {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -143,9 +143,9 @@ const Skills = () => {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-blue-600"
+                className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600"
               >
-                <h4 className="text-lg font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-300">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">
                   {cert.title}
                 </h4>
                 <p className="text-blue-600 font-semibold mb-2">{cert.issuer}</p>
@@ -174,7 +174,7 @@ const Skills = () => {
             href="https://leetcode.com/u/S_RAMA_SHESHA_SAI/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold hover:scale-105"
+            className="inline-block mt-6 px-6 py-3 bg-white text-orange-600 rounded-lg font-semibold"
           >
             View LeetCode Profile
           </a>
