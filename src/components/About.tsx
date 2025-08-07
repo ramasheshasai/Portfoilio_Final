@@ -92,8 +92,8 @@ const About = () => {
             <div className="text-gray-600">LinkedIn Connections</div>
           </div>
           <div className="p-6">
-            <div className="text-3xl font-bold text-orange-600 mb-2">2+</div>
-            <div className="text-gray-600">Years Experience</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">1 yr+ </div>
+            <div className="text-gray-600">Intern Experience</div>
           </div>
         </div>
       </div>

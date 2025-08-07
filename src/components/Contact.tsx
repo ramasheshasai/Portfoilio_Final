@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -17,9 +18,22 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
-    alert('Thank you for your message! I will get back to you soon.');
+
+    emailjs.send(
+      'service_xpy338u',
+      'template_srk0sff',
+      formData,
+      'WHHBszhEMM2BII21P'
+    )
+    .then((result) => {
+      console.log('Email sent:', result.text);
+      alert('Thank you for your message! I will get back to you soon.');
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+      alert('Something went wrong. Please try again.');
+    });
   };
 
   const contactInfo = [

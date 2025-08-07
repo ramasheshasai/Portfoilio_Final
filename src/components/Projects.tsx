@@ -120,10 +120,10 @@ const Projects = () => {
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </a>
-                  <button className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 text-sm font-medium hover:scale-105 hover-tilt">
+                  {/* <button className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 text-sm font-medium hover:scale-105 hover-tilt">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Details
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
