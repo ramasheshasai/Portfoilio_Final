@@ -1,115 +1,127 @@
-import React from 'react';
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Calendar, MapPin, Award } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
       title: "Product Management Intern",
       company: "Flam",
-      location: " On-Site Bengaluru, Karnataka, India",
+      location: "Bengaluru, Karnataka, India",
       duration: "June 2025 - Present",
-      type: "On-site-Paid-Intenship",
-      description: "Working on high-impact projects like Fandom Video, Royal Stag Campaign, Prism Interactive, and the Payments System.",
+      type: "On-site • Paid Internship",
+      description:
+        "Working on high-impact projects like Fandom Video, Royal Stag Campaign, Prism Interactive, and the Payments System.",
       achievements: [
         "Authored & refined PRDs, crafted intuitive user flows, and developed detailed user personas",
         "Led user testing efforts and collaborated with frontend and backend teams for fixes and enhancements",
         "Revamped Help Center structure including Privacy Policy and Terms & Conditions",
         "Researched & analyzed payment gateways and competitor strategies",
-        "Collaborated across design, tech, and marketing teams for cohesive user experiences"
+        "Collaborated across design, tech, and marketing teams for cohesive user experiences",
       ],
-      skills: ["SQL", "Agile Methodologies", "Product Management", "Figma", "Jira"]
+      skills: ["SQL", "Agile", "Product Management", "Figma", "Jira"],
     },
     {
-      title: "React-Js Developer",
-      company: "Celebal Technologies ",
+      title: "React.js Developer Intern",
+      company: "Celebal Technologies",
       location: "Remote",
-      duration: "June 2025 - MAugust 2025",
-      type: "Remote-Internship",
-      description: "Developed a responsive Service Desk Application using React.js with secure authentication, admin features, and real-time API integration.",
+      duration: "June 2025 - August 2025",
+      type: "Remote • Internship",
+      description:
+        "Developed a responsive Service Desk Application using React.js with secure authentication, admin features, and real-time API integration.",
       achievements: [
-         "Designed and developed a responsive Service Desk Application using modern web technologies with a strong focus on usability and accessibility.",
-          " Implemented a secure authentication system to ensure personalized user access and data protection.",
-        " Built admin-level features to assign, update, and close tickets with clear status visibility.",
-          " Integrated frontend components with backend APIs to enable real-time updates and smooth user interaction flow."
+        "Designed and developed a responsive Service Desk Application with usability and accessibility focus",
+        "Implemented secure authentication for personalized user access and data protection",
+        "Built admin features to assign, update, and close tickets with real-time status visibility",
+        "Integrated frontend components with backend APIs for smooth user flows",
       ],
-      skills: ["Research", "Technical Writing", "IoT", "Energy Systems"]
+      skills: ["React.js", "API Integration", "UI/UX", "Authentication"],
     },
     {
-      title: "Web Developer",
+      title: "Web Developer Intern",
       company: "Edunet Foundation",
       location: "Remote",
       duration: "June 2024 - July 2024",
-      type: "Internship",
-      description: "Developed comprehensive digital portfolio and established Git-based collaborative workflows.",
+      type: "Remote • Internship",
+      description:
+        "Developed comprehensive digital portfolio and established Git-based collaborative workflows.",
       achievements: [
-        "Developed comprehensive digital portfolio of 5 web pages",
-        "Emphasized user-centric design and cross-device responsiveness",
-        "Established standardized Git processes improving project management by 40%",
-        "Enhanced code maintenance by 25% and improved team communication"
+        "Created a portfolio of 5 responsive web pages",
+        "Emphasized user-centric design across devices",
+        "Established Git workflows, improving team efficiency by 40%",
+        "Enhanced code maintenance and collaboration by 25%",
       ],
-      skills: ["HTML", "CSS", "JavaScript", "Git", "Responsive Design"]
-    }
+      skills: ["HTML", "CSS", "JavaScript", "Git", "Responsive Design"],
+    },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Internships and professional roles where I applied technical and
+            management skills to deliver impact.
+          </p>
         </div>
 
-        <div className="space-y-8">
+        {/* 2-column layout */}
+        <div className="grid md:grid-cols-2 gap-10">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-8"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
                     {exp.title}
                   </h3>
-                  <h4 className="text-xl text-blue-600 font-semibold mb-3">
-                    {exp.company}
-                  </h4>
-                  <p className="text-gray-700 mb-4">{exp.description}</p>
+                  <p className="text-blue-600 font-semibold">{exp.company}</p>
                 </div>
-                
-                <div className="lg:ml-8 lg:text-right">
-                  <div className="flex items-center text-gray-600 mb-2 lg:justify-end">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{exp.duration}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 mb-2 lg:justify-end">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{exp.location}</span>
-                  </div>
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                    {exp.type}
-                  </span>
+                <div className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                  {exp.type}
                 </div>
               </div>
 
-              <div className="mb-6">
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">Key Achievements:</h5>
-                <ul className="space-y-2">
-                  {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Meta info */}
+              <div className="space-y-2 mb-4 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  {exp.duration}
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  {exp.location}
+                </div>
               </div>
 
+              {/* Description */}
+              <p className="text-gray-700 mb-6">{exp.description}</p>
+
+              {/* Achievements */}
+              <h4 className="text-lg font-semibold text-gray-900 mb-2 flex items-center">
+                <Award className="w-5 h-5 mr-2 text-green-600" /> Key
+                Achievements
+              </h4>
+              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+                {exp.achievements.map((a, i) => (
+                  <li key={i}>{a}</li>
+                ))}
+              </ul>
+
+              {/* Skills */}
               <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-3">Skills Used:</h5>
+                <h5 className="text-lg font-semibold text-gray-900 mb-2">
+                  Skills Used
+                </h5>
                 <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill, idx) => (
+                  {exp.skills.map((skill, i) => (
                     <span
-                      key={idx}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                      key={i}
+                      className="px-3 py-1 bg-white shadow-sm border border-gray-200 text-gray-700 rounded-full text-sm"
                     >
                       {skill}
                     </span>
