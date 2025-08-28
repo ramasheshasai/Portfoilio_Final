@@ -6,9 +6,9 @@ const Experience = () => {
     {
       title: "Product Management Intern",
       company: "Flam",
-      location: "Bengaluru, Karnataka, India",
+      location: " On-Site Bengaluru, Karnataka, India",
       duration: "June 2025 - Present",
-      type: "On-site",
+      type: "On-site-Paid-Intenship",
       description: "Working on high-impact projects like Fandom Video, Royal Stag Campaign, Prism Interactive, and the Payments System.",
       achievements: [
         "Authored & refined PRDs, crafted intuitive user flows, and developed detailed user personas",
@@ -20,17 +20,17 @@ const Experience = () => {
       skills: ["SQL", "Agile Methodologies", "Product Management", "Figma", "Jira"]
     },
     {
-      title: "Research Work - Acoustic Energy Harvesting",
-      company: "SRM University, AP",
-      location: "Amaravati, Andhra Pradesh, India",
-      duration: "January 2025 - March 2025",
-      type: "Research",
-      description: "Conducted research on converting ambient acoustic energy into electrical power using piezoelectric transducers.",
+      title: "React-Js Developer",
+      company: "Celebal Technologies ",
+      location: "Remote",
+      duration: "June 2025 - MAugust 2025",
+      type: "Remote-Internship",
+      description: "Developed a responsive Service Desk Application using React.js with secure authentication, admin features, and real-time API integration.",
       achievements: [
-        "Researched acoustic energy conversion for powering IoT and low-power devices",
-        "Served as primary author and presenter at 9th Research Day, SRM-AP",
-        "Successfully published paper among peer-reviewed entries",
-        "Demonstrated strong technical writing and presentation skills"
+         "Designed and developed a responsive Service Desk Application using modern web technologies with a strong focus on usability and accessibility.",
+          " Implemented a secure authentication system to ensure personalized user access and data protection.",
+        " Built admin-level features to assign, update, and close tickets with clear status visibility.",
+          " Integrated frontend components with backend APIs to enable real-time updates and smooth user interaction flow."
       ],
       skills: ["Research", "Technical Writing", "IoT", "Energy Systems"]
     },
