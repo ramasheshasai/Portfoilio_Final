@@ -62,7 +62,7 @@ const Hero = () => {
               <ExternalLink className="w-6 h-6" />
             </a>
             <a
-              href="mailto:ramasheshasai_s@srmap.edu.in"
+              href="mailto:satuluriramasheshasai@gmail.com"
               className="p-3 bg-green-600 text-white rounded-full"
             >
               <Mail className="w-6 h-6" />
