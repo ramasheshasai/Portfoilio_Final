@@ -8,6 +8,24 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "DevSync-Arena",
+      description:
+        "A real-time collaborative code editor enabling multiple users to code simultaneously with seamless synchronization.",
+      longDescription:
+        "Designed and built a real-time collaborative code editor to enhance teamwork and enable multiple users to code simultaneously. Focused on solving instant synchronization and communication in shared coding environments. Engineered with React, Node.js, Express, and Socket.IO using room-based architecture for scalability. Integrated CodeMirror, responsive UI, and WebSocket-powered live updates for smooth collaboration.",
+      technologies: ["React", "Node.js", "Express", "Socket.IO", "CodeMirror", "WebSocket"],
+      features: [
+        "Real-time collaborative coding",
+        "Room-based scalable architecture",
+        "WebSocket-powered instant updates",
+        "CodeMirror editor integration",
+        "Responsive and user-friendly interface",
+      ],
+      github: "https://github.com/ramasheshasai/DevSync-Arena",
+      icon: <Code className="w-8 h-8" />,
+      category: "Full Stack",
+    },
+    {
       title: "BookBazar",
       description:
         "A comprehensive book shopping cart system with admin panel for inventory management and user-friendly shopping experience.",
