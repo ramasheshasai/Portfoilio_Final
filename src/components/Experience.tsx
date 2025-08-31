@@ -55,58 +55,58 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+    <section id="experience" className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Experience</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-2">
             Internships and professional roles where I applied technical and
             management skills to deliver impact.
           </p>
         </div>
 
-        {/* 2-column layout */}
-        <div className="grid md:grid-cols-2 gap-10">
+        {/* Responsive layout */}
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-8"
+              className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition duration-300 p-4 sm:p-6 lg:p-8"
             >
               {/* Header */}
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 leading-tight">
                     {exp.title}
                   </h3>
-                  <p className="text-blue-600 font-semibold">{exp.company}</p>
+                  <p className="text-blue-600 font-semibold text-sm sm:text-base">{exp.company}</p>
                 </div>
-                <div className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                <div className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium self-start sm:self-center">
                   {exp.type}
                 </div>
               </div>
 
               {/* Meta info */}
-              <div className="space-y-2 mb-4 text-sm text-gray-600">
+              <div className="space-y-1 sm:space-y-2 mb-4 text-xs sm:text-sm text-gray-600">
                 <div className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-2" />
+                  <Calendar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
                   {exp.duration}
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="w-4 h-4 mr-2" />
+                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
                   {exp.location}
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-gray-700 mb-6">{exp.description}</p>
+              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 leading-relaxed">{exp.description}</p>
 
               {/* Achievements */}
-              <h4 className="text-lg font-semibold text-gray-900 mb-2 flex items-center">
-                <Award className="w-5 h-5 mr-2 text-green-600" /> Key
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-600 flex-shrink-0" /> Key
                 Achievements
               </h4>
-              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+              <ul className="list-disc list-inside text-xs sm:text-sm text-gray-700 mb-4 sm:mb-6 space-y-1 leading-relaxed">
                 {exp.achievements.map((a, i) => (
                   <li key={i}>{a}</li>
                 ))}
@@ -114,14 +114,14 @@ const Experience = () => {
 
               {/* Skills */}
               <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-2">
+                <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
                   Skills Used
                 </h5>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {exp.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-white shadow-sm border border-gray-200 text-gray-700 rounded-full text-sm"
+                      className="px-2 sm:px-3 py-1 bg-white shadow-sm border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium"
                     >
                       {skill}
                     </span>

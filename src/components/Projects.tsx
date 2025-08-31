@@ -103,25 +103,25 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-2">
             Here are some of my featured projects that showcase my technical
             skills and problem-solving abilities.
           </p>
         </div>
 
         {/* Category Nav */}
-        <div className="flex justify-center space-x-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-6 sm:mb-8 lg:mb-10 px-2">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+              className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-xs sm:text-sm lg:text-base ${
                 activeCategory === cat
                   ? "bg-blue-600 text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -133,35 +133,35 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden group"
+              className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] sm:hover:scale-105 transition-all duration-300 overflow-hidden group"
             >
-              <div className="p-6 relative">
+              <div className="p-4 sm:p-6 relative">
                 {/* Project Header */}
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-blue-100 text-blue-600 rounded-lg mr-4">
+                <div className="flex items-start sm:items-center mb-3 sm:mb-4">
+                  <div className="p-2 sm:p-3 bg-blue-100 text-blue-600 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
                     {project.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
                     {project.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">{project.description}</p>
 
                 {/* Features */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                <div className="mb-3 sm:mb-4">
+                  <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">
                     Key Features:
                   </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                     {project.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-2"></div>
+                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-600 rounded-full mt-1.5 sm:mt-2 mr-2 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -169,12 +169,12 @@ const Projects = () => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-4 sm:mb-6">
+                  <div className="flex flex-wrap gap-1 sm:gap-2">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
+                        className="px-2 py-0.5 sm:py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
                       >
                         {tech}
                       </span>
@@ -183,14 +183,14 @@ const Projects = () => {
                 </div>
 
                 {/* GitHub Link */}
-                <div className="flex space-x-3">
+                <div className="flex">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 text-sm font-medium"
+                    className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 text-xs sm:text-sm font-medium transition-colors"
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                     Code
                   </a>
                 </div>
@@ -200,14 +200,14 @@ const Projects = () => {
         </div>
 
         {/* All Projects CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12 px-4">
           <a
             href="https://github.com/ramasheshasai"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-semibold"
+            className="inline-flex items-center px-4 sm:px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-semibold text-sm sm:text-base"
           >
-            <Github className="w-5 h-5 mr-2" />
+            <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             View All Projects on GitHub
           </a>
         </div>

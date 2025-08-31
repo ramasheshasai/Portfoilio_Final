@@ -42,52 +42,52 @@ const Research = () => {
   ];
 
   return (
-    <section id="research" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Work</h2>
+    <section id="research" className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Research Work</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-2">
             Exploring innovative solutions in energy harvesting, sustainable technology, and medical imaging.
           </p>
         </div>
 
-        {/* 2-column layout for research papers */}
-        <div className="grid md:grid-cols-2 gap-10">
+        {/* Responsive layout for research papers */}
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {researchPapers.map((paper, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl shadow-xl overflow-hidden p-8"
+              className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden p-4 sm:p-6 lg:p-8"
             >
-              <div className="flex items-center mb-6">
-                <div className="p-4 bg-blue-600 text-white rounded-xl mr-6">
+              <div className="flex items-start sm:items-center mb-4 sm:mb-6">
+                <div className="p-3 sm:p-4 bg-blue-600 text-white rounded-lg sm:rounded-xl mr-3 sm:mr-4 lg:mr-6 flex-shrink-0">
                   {paper.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{paper.title}</h3>
-                  <p className="text-blue-600 font-semibold">{paper.institution}</p>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 sm:mb-2 leading-tight">{paper.title}</h3>
+                  <p className="text-blue-600 font-semibold text-sm sm:text-base">{paper.institution}</p>
                 </div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-6">{paper.description}</p>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">{paper.description}</p>
 
-              <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                <Award className="w-5 h-5 mr-2 text-green-600" /> Highlights
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-600 flex-shrink-0" /> Highlights
               </h4>
-              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+              <ul className="list-disc list-inside text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 space-y-1 leading-relaxed">
                 {paper.highlights.map((h, i) => (
                   <li key={i}>{h}</li>
                 ))}
               </ul>
 
-              <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                <Users className="w-5 h-5 mr-2 text-purple-600" /> Skills
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-purple-600 flex-shrink-0" /> Skills
               </h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1 sm:gap-2">
                 {paper.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm"
+                    className="px-2 sm:px-3 py-1 bg-white text-gray-700 rounded-full text-xs sm:text-sm font-medium shadow-sm"
                   >
                     {skill}
                   </span>
@@ -98,33 +98,33 @@ const Research = () => {
         </div>
 
         {/* Additional Research Interests */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-12 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Lightbulb className="w-6 h-6" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-lg mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+              <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Sustainable Technology</h4>
-            <p className="text-gray-600 text-sm">
+            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Sustainable Technology</h4>
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
               Exploring renewable energy solutions and sustainable engineering practices
             </p>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-green-100 text-green-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Users className="w-6 h-6" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 text-green-600 rounded-lg mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">IoT Applications</h4>
-            <p className="text-gray-600 text-sm">
+            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">IoT Applications</h4>
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
               Developing innovative solutions for Internet of Things and smart systems
             </p>
           </div>
 
-          <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Award className="w-6 h-6" />
+          <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300 sm:col-span-2 lg:col-span-1">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 text-purple-600 rounded-lg mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+              <Award className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Academic Excellence</h4>
-            <p className="text-gray-600 text-sm">
+            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Academic Excellence</h4>
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
               Committed to rigorous research methodology and peer-reviewed publications
             </p>
           </div>
