@@ -9,6 +9,7 @@ import Research from './components/Research';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Education />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   );
 }
