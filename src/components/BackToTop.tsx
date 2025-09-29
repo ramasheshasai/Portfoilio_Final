@@ -6,8 +6,8 @@ const BackToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      // Show button when page is scrolled down 300px
-      if (window.pageYOffset > 300) {
+      // Show button as soon as user starts scrolling
+      if (window.pageYOffset > 0) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
