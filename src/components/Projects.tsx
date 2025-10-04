@@ -62,6 +62,32 @@ const Projects = () => {
       category: "Tech Stack",
     },
     {
+  title: "TaskFlow - To Do List",
+  description:
+    "A modern to-do list app built with React, TypeScript, and Tailwind CSS, featuring task management, filtering, and real-time statistics.",
+  longDescription:
+    "Developed TaskFlow, a feature-rich to-do list application leveraging React with TypeScript and styled using Tailwind CSS. Focused on delivering smooth task management, filtering, sorting, and real-time statistics without any backend dependency. Implemented localStorage for persistent data, ensuring tasks remain saved across sessions. Designed with glass-morphism UI, animations, and responsive layouts for a polished user experience.",
+  technologies: [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Lucide React",
+    "Vite",
+    "localStorage"
+  ],
+  features: [
+    "Add, edit, delete, and complete tasks",
+    "Filter by all, active, or completed tasks",
+    "Sort by date, alphabetical, or priority",
+    "Persistent storage with localStorage",
+    "Glass-morphism design and responsive UI"
+  ],
+  github: "https://github.com/ramasheshasai/To-Do-List_deployed",
+  icon: <Code className="w-8 h-8" />,
+  category: "Tech Stack",
+},
+
+    {
       title: "Weekday Engine",
       description:
         "Multi-platform date-to-weekday calculation engine with advanced algorithms for leap year validation.",
