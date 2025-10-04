@@ -7,7 +7,7 @@ const Experience = () => {
       title: "Product Management Intern",
       company: "Flam",
       location: "Bengaluru, Karnataka, India",
-      duration: "June 2025 - Present",
+      duration: "June 2025 - Sept 2025",
       type: "On-site • Paid Internship",
       description:
         "Working on high-impact projects like Fandom Video, Royal Stag Campaign, Prism Interactive, and the Payments System.",
