@@ -11,7 +11,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-            Product Management Intern @Flam | Hackathon Winner @BITS-Hyderabad | 
+            Former Product Management Intern @Flam | Hackathon Winner @BITS-Hyderabad | 
             4th Year CSE SRM AP - CGPA 9.12
           </p>
           

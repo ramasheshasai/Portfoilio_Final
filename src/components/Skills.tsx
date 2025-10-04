@@ -62,6 +62,18 @@ const Skills = () => {
 
   const certifications = [
     {
+      title: "Deloitte Data Analyst Virtual Internship",
+      issuer: "Deloitte Australia (Forage)",
+      date: "2025",
+      description: "Completed an industry-recognized internship focused on data analysis, visualization, and business insights using Excel and SQL."
+    },
+    {
+      title: "Oracle GenAI Virtual Internship",
+      issuer: "Oracle (AICTE Eduskills)",
+      date: "2025",
+      description: "Gained hands-on experience in generative AI concepts, prompt engineering, and AI-driven automation using Oracle Cloud Infrastructure."
+    },
+    {
       title: "BITS Pilani Hackathon Winner",
       issuer: "BITS Pilani, Hyderabad",
       date: "March 2025",
@@ -135,26 +147,20 @@ const Skills = () => {
         </div>
 
         {/* Certifications & Achievements */}
-        <div>
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
-            Certifications & Achievements
-          </h3>
-          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-l-4 border-blue-600 hover:shadow-xl transition-shadow"
-              >
-                <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2 leading-tight">
-                  {cert.title}
-                </h4>
-                <p className="text-blue-600 font-semibold mb-2 text-sm sm:text-base">{cert.issuer}</p>
-                <p className="text-gray-500 text-xs sm:text-sm mb-2 sm:mb-3">{cert.date}</p>
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{cert.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-4">
+          {certifications.map((cert, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-4 border-l-4 border-blue-600 hover:shadow-lg transition-shadow"
+            >
+              <h4 className="text-base font-bold text-gray-900 mb-1">{cert.title}</h4>
+              <p className="text-blue-600 font-semibold mb-1 text-sm">{cert.issuer}</p>
+              <p className="text-gray-500 text-xs mb-2">{cert.date}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">{cert.description}</p>
+            </div>
+          ))}
         </div>
+
 
         {/* LeetCode Stats */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 sm:p-8 text-white text-center">
