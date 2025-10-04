@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Rama Shesha Sai</h3>
             <p className="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
-              Product Management Intern | Full-Stack Developer | Research Enthusiast
+              Former Product Management Intern | Full-Stack Developer | Research Enthusiast
             </p>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
               Building innovative solutions and exploring cutting-edge technologies.
