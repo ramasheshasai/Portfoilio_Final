@@ -62,30 +62,30 @@ const Projects = () => {
       category: "Tech Stack",
     },
     {
-  title: "TaskFlow - To Do List",
-  description:
-    "A modern to-do list app built with React, TypeScript, and Tailwind CSS, featuring task management, filtering, and real-time statistics.",
-  longDescription:
-    "Developed TaskFlow, a feature-rich to-do list application leveraging React with TypeScript and styled using Tailwind CSS. Focused on delivering smooth task management, filtering, sorting, and real-time statistics without any backend dependency. Implemented localStorage for persistent data, ensuring tasks remain saved across sessions. Designed with glass-morphism UI, animations, and responsive layouts for a polished user experience.",
-  technologies: [
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Lucide React",
-    "Vite",
-    "localStorage"
-  ],
-  features: [
-    "Add, edit, delete, and complete tasks",
-    "Filter by all, active, or completed tasks",
-    "Sort by date, alphabetical, or priority",
-    "Persistent storage with localStorage",
-    "Glass-morphism design and responsive UI"
-  ],
-  github: "https://github.com/ramasheshasai/To-Do-List_deployed",
-  icon: <Code className="w-8 h-8" />,
-  category: "Tech Stack",
-},
+      title: "TaskFlow - To Do List",
+      description:
+        "A modern to-do list app built with React, TypeScript, and Tailwind CSS, featuring task management, filtering, and real-time statistics.",
+      longDescription:
+        "Developed TaskFlow, a feature-rich to-do list application leveraging React with TypeScript and styled using Tailwind CSS. Focused on delivering smooth task management, filtering, sorting, and real-time statistics without any backend dependency. Implemented localStorage for persistent data, ensuring tasks remain saved across sessions. Designed with glass-morphism UI, animations, and responsive layouts for a polished user experience.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Lucide React",
+        "Vite",
+        "localStorage"
+      ],
+      features: [
+        "Add, edit, delete, and complete tasks",
+        "Filter by all, active, or completed tasks",
+        "Sort by date, alphabetical, or priority",
+        "Persistent storage with localStorage",
+        "Glass-morphism design and responsive UI"
+      ],
+      github: "https://github.com/ramasheshasai/To-Do-List_deployed",
+      icon: <Code className="w-8 h-8" />,
+      category: "Tech Stack",
+    },
 
     {
       title: "Weekday Engine",
@@ -105,6 +105,43 @@ const Projects = () => {
       icon: <Code className="w-8 h-8" />,
       category: "Universal",
     },
+    {
+      title: "ParadigPM ",
+      description:
+        "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
+      longDescription:
+        "Developed a full-stack Product Management Platform using React, Node.js, Express, and MongoDB to automate PRD creation and persona generation. Designed an intuitive dashboard with predefined templates and auto-generation logic, cutting documentation effort by 60% and enhancing cross-team productivity.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      features: [
+        "Automated PRD and persona generation",
+        "Predefined templates for structured documentation",
+        "Dashboard for managing documents",
+        "Full-stack architecture with REST APIs",
+        "Improved cross-team productivity by 60%"
+      ],
+      github: "https://github.com/ramasheshasai/Working_Prd_Make",
+      icon: <Code className="w-8 h-8" />,
+      category: "Full Stack",
+    },
+    {
+      title: "ParadigPM",
+      description:
+        "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
+      longDescription:
+        "Developed a full-stack Product Management Platform using React, Node.js, Express, and MongoDB to automate PRD creation and persona generation. Designed an intuitive dashboard with predefined templates and auto-generation logic, cutting documentation effort by 60% and enhancing cross-team productivity.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      features: [
+        "Automated PRD and persona generation",
+        "Predefined templates for structured documentation",
+        "Dashboard for managing documents",
+        "Full-stack architecture with REST APIs",
+        "Improved cross-team productivity by 60%"
+      ],
+      github: "https://github.com/ramasheshasai/Working_Prd_Make",
+      icon: <Code className="w-8 h-8" />,
+      category: "Product Analysis",
+    },
+
     {
       title: "Chronicle Product TearDown",
       description:
@@ -147,11 +184,10 @@ const Projects = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-xs sm:text-sm lg:text-base ${
-                activeCategory === cat
+              className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-xs sm:text-sm lg:text-base ${activeCategory === cat
                   ? "bg-blue-600 text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
+                }`}
             >
               {cat}
             </button>
