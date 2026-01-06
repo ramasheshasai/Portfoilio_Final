@@ -4,23 +4,24 @@ import { FileText, Award, Users, Lightbulb } from 'lucide-react';
 const Research = () => {
   const researchPapers = [
     {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Acoustic Energy Harvesting",
-      institution: "SRM University, AP • Jan 2025 - Mar 2025",
-      description:
-        "Research on converting ambient acoustic energy into electrical power using piezoelectric transducers, aimed at powering IoT devices and low-power electronics in noisy environments.",
-      highlights: [
-        "Primary author & presenter at 9th Research Day, SRM-AP",
-        "Published among peer-reviewed entries",
-        "Focus on sustainable IoT power solutions",
-      ],
-      skills: [
-        "Technical Writing",
-        "Research Methodology",
-        "Data Analysis",
-        "Presentation Skills",
-      ],
-    },
+  icon: <Lightbulb className="w-8 h-8" />,
+  title: "Centralised and Federated Learning",
+  institution: "SRM University, AP • Sept 2025 - January 2026",
+  description:
+    "An accepted peer-reviewed research paper comparing centralized and federated learning architectures, analyzing trade-offs in scalability, data privacy, communication efficiency, and real-world deployment in distributed systems.",
+  highlights: [
+    "Accepted and published among peer-reviewed academic submissions",
+    "Experimental evaluation of centralized vs federated learning models",
+    "Emphasis on privacy-preserving learning and distributed intelligence"
+  ],
+  skills: [
+    "Research Methodology",
+    "Federated Learning",
+    "Machine Learning",
+    "Data Analysis",
+  ],
+},
+
     {
       icon: <FileText className="w-8 h-8" />,
       title: "MRI Denoising: A Filter Comparison Study",
@@ -103,9 +104,9 @@ const Research = () => {
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-lg mx-auto mb-3 sm:mb-4 flex items-center justify-center">
               <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Sustainable Technology</h4>
+            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Ai & ML </h4>
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-              Exploring renewable energy solutions and sustainable engineering practices
+              Exploring Machine learning and deep learning engineering practices
             </p>
           </div>
 
@@ -113,9 +114,9 @@ const Research = () => {
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 text-green-600 rounded-lg mx-auto mb-3 sm:mb-4 flex items-center justify-center">
               <Users className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">IoT Applications</h4>
+            <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Reaserch Acceptance</h4>
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-              Developing innovative solutions for Internet of Things and smart systems
+              Paper got approved and published in peer-reviewed journals
             </p>
           </div>
 

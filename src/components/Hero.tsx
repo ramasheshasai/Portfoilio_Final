@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="mt-4 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-600 px-4">
             <div className="flex items-center justify-center">
               <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
-              ramasheshasai_s@srmap.edu.in
+              satuluriramasheshasai@gmail.com
             </div>
             <div className="flex items-center justify-center">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />

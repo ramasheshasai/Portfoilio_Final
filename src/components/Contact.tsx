@@ -40,8 +40,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "ramasheshasai_s@srmap.edu.in",
-      link: "mailto:ramasheshasai_s@srmap.edu.in"
+      value: "satuluriramasheshasai@gmail.com",
+      link: "mailto:satuluriramasheshasai@gmail.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,

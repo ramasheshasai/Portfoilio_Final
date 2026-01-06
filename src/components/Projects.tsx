@@ -106,7 +106,7 @@ const Projects = () => {
       category: "Universal",
     },
     {
-      title: "ParadigPM ",
+      title: "ProdigyPM ",
       description:
         "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
       longDescription:
@@ -124,7 +124,7 @@ const Projects = () => {
       category: "Full Stack",
     },
     {
-      title: "ParadigPM",
+      title: "Prodigy PM",
       description:
         "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
       longDescription:

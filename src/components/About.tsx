@@ -88,7 +88,7 @@ const About = () => {
             <div className="text-gray-600 text-xs sm:text-sm lg:text-base">LeetCode Rating</div>
           </div>
           <div className="p-3 sm:p-4 lg:p-6 bg-gray-50 rounded-xl">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">500+</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">1000+</div>
             <div className="text-gray-600 text-xs sm:text-sm lg:text-base">LinkedIn Connections</div>
           </div>
           <div className="p-3 sm:p-4 lg:p-6 bg-gray-50 rounded-xl">
