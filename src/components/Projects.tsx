@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { Github, Database, Globe, Code } from "lucide-react";
+const NotionIcon = (props) => (
+  <svg
+    {...props}
+    viewBox="0 0 100 100"
+    fill="currentColor"
+  >
+    <path d="M18.3 22.4c2-.8 4.2-1.2 6.4-1.1l45.3 2.6c3.2.2 5.7 2.8 5.9 6l2.5 45.1c.3 5.6-3.9 10.4-9.4 10.7l-45.1 2.5c-5.6.3-10.4-3.9-10.7-9.4L10.7 33.7c-.3-5.6 3.9-10.4 9.4-10.7zM36 37h6.8l8.5 18.9h.2L60 37h6.4v29.3h-5.3V46.2h-.2L50.4 66h-4.6L41.5 46h-.2v20.3H36V37z"/>
+  </svg>
+);
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("Full Stack");
 
-  const categories = ["Full Stack", "Tech Stack", "Product Analysis", "Universal"];
+  const categories = ["Full Stack", "Tech Stack", "Product Analysis", "System Design"];
 
   const projects = [
     {
@@ -88,23 +97,32 @@ const Projects = () => {
     },
 
     {
-      title: "Weekday Engine",
-      description:
-        "Multi-platform date-to-weekday calculation engine with advanced algorithms for leap year validation.",
-      longDescription:
-        "Engineered a robust date-to-day-of-week calculation engine across Python (Flask), Java (Swing), and C++ platforms with advanced leap year validation and century computation.",
-      technologies: ["C++", "Java", "Python", "Flask", "Swing"],
-      features: [
-        "Cross-platform compatibility",
-        "Advanced leap year algorithms",
-        "Century and month code computation",
-        "Rigorous input validation",
-        "Mathematical heuristics for edge cases",
-      ],
-      github: "https://github.com/ramasheshasai/Weekday-Engine",
-      icon: <Code className="w-8 h-8" />,
-      category: "Universal",
-    },
+  title: "Netflix – System Design",
+  description:
+    "Comprehensive end-to-end system design covering scalable architecture, CDN strategy, microservices, caching, and streaming pipeline.",
+  longDescription:
+    "Designed a production-grade Netflix system architecture covering user authentication, content delivery network strategy, load balancing, database design, recommendation logic, microservices communication, fault tolerance, scalability planning, and video streaming pipeline with detailed diagrams and workflows.",
+  technologies: [
+    "System Design",
+    "Microservices",
+    "CDN",
+    "Load Balancing",
+    "Caching",
+    "Databases"
+  ],
+  features: [
+    "Highly scalable architecture",
+    "Global CDN distribution strategy",
+    "Microservices-based modular design",
+    "Efficient caching & load balancing",
+    "Fault tolerance & reliability mechanisms",
+    "Detailed architectural workflows & diagrams"
+  ],
+  notion : "https://www.notion.so/Netflix-2e092b8af6be8030800cc7409328a943?source=copy_link",
+  icon: <Code className="w-8 h-8" />,
+  category: "System Design",
+},
+
     {
       title: "ProdigyPM ",
       description:
@@ -170,7 +188,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Projects And Blogs </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-2">
             Here are some of my featured projects that showcase my technical
@@ -247,14 +265,24 @@ const Projects = () => {
                 {/* GitHub Link */}
                 <div className="flex">
                   <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 text-xs sm:text-sm font-medium transition-colors"
-                  >
-                    <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                    Code
-                  </a>
+  href={project.notion || project.github}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 text-xs sm:text-sm font-medium transition-colors"
+>
+  {project.notion ? (
+    <>
+      <NotionIcon className="w-4 h-4 mr-2" />
+      View Case Study
+    </>
+  ) : (
+    <>
+      <Github className="w-4 h-4 mr-2" />
+      Code
+    </>
+  )}
+</a>
+
                 </div>
               </div>
             </div>
