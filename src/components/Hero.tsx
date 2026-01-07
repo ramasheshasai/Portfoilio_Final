@@ -12,7 +12,7 @@ const Hero = () => {
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Former Product Management Intern @Flam | Hackathon Winner @BITS-Hyderabad | 
-            4th Year CSE SRM AP - CGPA 9.12
+            4th Year CSE SRM AP - CGPA 9.17
           </p>
           
           <p className="text-sm sm:text-base lg:text-lg text-gray-700 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2">

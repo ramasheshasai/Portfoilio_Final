@@ -80,7 +80,7 @@ const About = () => {
 
         <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
           <div className="p-3 sm:p-4 lg:p-6 bg-gray-50 rounded-xl">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">9.12</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">9.17</div>
             <div className="text-gray-600 text-xs sm:text-sm lg:text-base">CGPA</div>
           </div>
           <div className="p-3 sm:p-4 lg:p-6 bg-gray-50 rounded-xl">

@@ -9,7 +9,7 @@ const Education = () => {
       institution: "SRM University, AP",
       location: "Amaravati, Andhra Pradesh",
       duration: "October 2022 - 2026",
-      grade: "CGPA: 9.12",
+      grade: "CGPA: 9.17",
       status: "Current",
       highlights: [
         "Member of Environment & Arts Clubs",
@@ -55,7 +55,7 @@ const Education = () => {
     },
     {
       test: "SGPA (Latest Semester)",
-      score: "9.56",
+      score: "9.714",
       date: "May 2025",
       description: "Semester Grade Point Average"
     }
