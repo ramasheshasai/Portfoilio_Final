@@ -197,6 +197,31 @@ const Projects = () => {
       category: "Full Stack",
     },
     {
+  title: "YouTube – System Design & Tech Deep Dives",
+  description:
+    "Curated YouTube learning notes covering system design, backend architecture, scalability, and engineering concepts.",
+  longDescription:
+    "Created structured Notion notes by deeply analyzing high-quality YouTube content on system design, backend engineering, scalability patterns, and real-world architectures. These notes break down complex topics into clear explanations, diagrams, and takeaways, serving as a long-term reference for interview prep and practical learning.",
+  technologies: [
+    "System Design",
+    "Backend Engineering",
+    "Scalability",
+    "Distributed Systems",
+    "Learning Notes"
+  ],
+  features: [
+    "Well-structured YouTube learning notes",
+    "Simplified explanations of complex topics",
+    "Interview-focused system design concepts",
+    "Practical engineering insights",
+    "Continuously updated knowledge base"
+  ],
+  notion: "https://www.notion.so/Youtube-2e192b8af6be80689890ca2d635ec067?source=copy_link",
+  icon: <Code className="w-8 h-8" />,
+  category: "System Design",
+},
+
+    {
       title: "Prodigy PM",
       description:
         "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
