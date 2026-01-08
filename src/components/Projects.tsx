@@ -53,6 +53,61 @@ const Projects = () => {
       category: "Full Stack",
     },
     {
+  title: "ReadmeForge",
+  description:
+    "A GitHub README builder that provides real GitHub-style live preview, multiple templates, and instant Markdown export.",
+  longDescription:
+    "Designed and built ReadmeForge, a production-quality GitHub README generator focused on accuracy and developer experience. The platform offers real GitHub-style Markdown rendering (including HTML, images, badges, and stats cards), multiple professionally designed templates, and instant export. Built with a clean component-driven architecture and optimized for usability, ensuring developers see exactly how their README will appear on GitHub before publishing.",
+  technologies: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "React Markdown",
+    "GitHub Markdown CSS",
+    "Lucide React"
+  ],
+  features: [
+    "Real GitHub-accurate live README preview",
+    "Supports Markdown + embedded HTML rendering",
+    "Multiple professional README templates",
+    "Instant README.md export and copy",
+    "Developer-focused UI with responsive design"
+  ],
+  github: "https://github.com/ramasheshasai/ReadmeForge",
+  live: "https://git-hub-readme-generator-pi.vercel.app/",
+  icon: <Code className="w-8 h-8" />,
+  category: "Full Stack",
+},
+{
+  title: "ReadmeForge",
+  description:
+    "A GitHub README builder that provides real GitHub-style live preview, multiple templates, and instant Markdown export.",
+  longDescription:
+    "Designed and built ReadmeForge, a production-quality GitHub README generator focused on accuracy and developer experience. The platform offers real GitHub-style Markdown rendering (including HTML, images, badges, and stats cards), multiple professionally designed templates, and instant export. Built with a clean component-driven architecture and optimized for usability, ensuring developers see exactly how their README will appear on GitHub before publishing.",
+  technologies: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "React Markdown",
+    "GitHub Markdown CSS",
+    "Lucide React"
+  ],
+  features: [
+    "Real GitHub-accurate live README preview",
+    "Supports Markdown + embedded HTML rendering",
+    "Multiple professional README templates",
+    "Instant README.md export and copy",
+    "Developer-focused UI with responsive design"
+  ],
+  github: "https://github.com/ramasheshasai/ReadmeForge",
+  live: "https://git-hub-readme-generator-pi.vercel.app/",
+  icon: <Code className="w-8 h-8" />,
+  category: "Tech Stack",
+},
+
+    {
       title: "News Website",
       description:
         "Real-time news web application built with React.js, featuring multiple categories and responsive design.",
