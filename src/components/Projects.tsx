@@ -50,7 +50,7 @@ const Projects = () => {
       ],
       github: "https://github.com/ramasheshasai/book_bazar",
       icon: <Database className="w-8 h-8" />,
-      category: "Full Stack",
+      category: "Tech Stack",
     },
     {
   title: "ReadmeForge",
@@ -147,6 +147,7 @@ const Projects = () => {
         "Glass-morphism design and responsive UI"
       ],
       github: "https://github.com/ramasheshasai/To-Do-List_deployed",
+      live : "https://task-flow-ten.vercel.app/",
       icon: <Code className="w-8 h-8" />,
       category: "Tech Stack",
     },
@@ -179,23 +180,25 @@ const Projects = () => {
 },
 
     {
-      title: "ProdigyPM ",
-      description:
-        "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
-      longDescription:
-        "Developed a full-stack Product Management Platform using React, Node.js, Express, and MongoDB to automate PRD creation and persona generation. Designed an intuitive dashboard with predefined templates and auto-generation logic, cutting documentation effort by 60% and enhancing cross-team productivity.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-      features: [
-        "Automated PRD and persona generation",
-        "Predefined templates for structured documentation",
-        "Dashboard for managing documents",
-        "Full-stack architecture with REST APIs",
-        "Improved cross-team productivity by 60%"
-      ],
-      github: "https://github.com/ramasheshasai/Working_Prd_Make",
-      icon: <Code className="w-8 h-8" />,
-      category: "Full Stack",
-    },
+  title: "ProdigyPM",
+  description:
+    "A unified platform streamlining PRD and persona creation for product managers with automated templates and workflow integration.",
+  longDescription:
+    "Developed a full-stack Product Management Platform using React, Node.js, Express, and MongoDB...",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+  features: [
+    "Automated PRD and persona generation",
+    "Predefined templates for structured documentation",
+    "Dashboard for managing documents",
+    "Full-stack architecture with REST APIs",
+    "Improved cross-team productivity by 60%"
+  ],
+  github: "https://github.com/ramasheshasai/Working_Prd_Make",
+  live: "https://prodigy-pm.vercel.app/signup", // ✅ ADD THIS
+  icon: <Code className="w-8 h-8" />,
+  category: "Full Stack",
+},
+
     {
   title: "YouTube – System Design & Tech Deep Dives",
   description:
@@ -236,6 +239,7 @@ const Projects = () => {
         "Improved cross-team productivity by 60%"
       ],
       github: "https://github.com/ramasheshasai/Working_Prd_Make",
+       live: "https://prodigy-pm.vercel.app/signup", 
       icon: <Code className="w-8 h-8" />,
       category: "Product Analysis",
     },
@@ -343,27 +347,42 @@ const Projects = () => {
                 </div>
 
                 {/* GitHub Link */}
-                <div className="flex">
-                  <a
-  href={project.notion || project.github}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 text-xs sm:text-sm font-medium transition-colors"
->
-  {project.notion ? (
-    <>
-      <NotionIcon className="w-4 h-4 mr-2" />
-      View Case Study
-    </>
-  ) : (
-    <>
-      <Github className="w-4 h-4 mr-2" />
-      Code
-    </>
-  )}
-</a>
+                {/* CTA Buttons */}
+<div className="flex gap-2">
+  {/* Primary CTA */}
+  <a
+    href={project.notion || project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-1 inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 text-xs sm:text-sm font-medium transition-colors"
+  >
+    {project.notion ? (
+      <>
+        <NotionIcon className="w-4 h-4 mr-2" />
+        Case Study
+      </>
+    ) : (
+      <>
+        <Github className="w-4 h-4 mr-2" />
+        Code
+      </>
+    )}
+  </a>
 
-                </div>
+  {/* Live Demo CTA (only if exists) */}
+  {project.live && (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex-1 inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-xs sm:text-sm font-medium transition-colors"
+    >
+      <Globe className="w-4 h-4 mr-2" />
+      Live
+    </a>
+  )}
+</div>
+
               </div>
             </div>
           ))}
