@@ -39,24 +39,9 @@ const About = () => {
               Passionate About Innovation & Technology
             </h3>
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
-              <p>
-                I'm Satuluri Rama Shesha Sai, a final-year Computer Science Engineering student at 
-                SRM University-AP, with a strong CGPA of 9.12. Currently working as a Product Management 
-                Intern at Flam, I bring a well-rounded background in software development, research, 
-                and cross-functional collaboration.
-              </p>
-              <p>
-                With proficiency in C, C++, Python, HTML, CSS, JavaScript, and a solid grounding in 
-                Data Structures and Algorithms, I enjoy building scalable, user-focused solutions and 
-                exploring innovative approaches in tech. My projects range from full-stack web applications 
-                to energy harvesting research, reflecting both technical versatility and creative thinking.
-              </p>
-              <p>
-                I thrive in fast-paced, learning-intensive environments and enjoy collaborating with 
-                multidisciplinary teams to bring impactful ideas to life. With over 500+ connections 
-                and growing engagement on platforms like LinkedIn, I'm actively exploring new opportunities 
-                to contribute, learn, and innovate.
-              </p>
+             <p> I’m <strong>Satuluri Rama Shesha Sai</strong>, a final-year Computer Science Engineering student at <strong>SRM University-AP</strong> with a CGPA of <strong>9.17</strong>. A former <strong>Product Management Intern at Flam</strong>, I blend technical depth with product thinking and cross-functional collaboration. </p> 
+             <p> Skilled in <strong>C, C++, Python, HTML, CSS, and JavaScript</strong>, with a strong foundation in <strong>Data Structures and Algorithms</strong>, I enjoy crafting scalable, user-centric solutions. My work spans <strong>full-stack web applications</strong> to <strong>energy harvesting research</strong>, reflecting both versatility and curiosity. </p> 
+             <p> I thrive in fast-paced, learning-driven environments and enjoy turning ideas into impact through teamwork. With <strong>1,000+ LinkedIn connections</strong> and growing engagement, I’m actively seeking opportunities to <strong>build, learn, and innovate</strong>. </p>
             </div>
           </div>
 
