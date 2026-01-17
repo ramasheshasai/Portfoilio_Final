@@ -56,7 +56,7 @@ const Education = () => {
     {
       test: "SGPA (Latest Semester)",
       score: "9.714",
-      date: "May 2025",
+      date: "January 2026",
       description: "Semester Grade Point Average"
     }
   ];
