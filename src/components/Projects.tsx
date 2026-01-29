@@ -244,6 +244,31 @@ const Projects = () => {
       category: "Full Stack",
     },
     {
+  title: "Google Analytics – System Design Blog",
+  description:
+    "Deep-dive system design notes explaining how Google Analytics works internally, covering data collection, event pipelines, storage, and reporting.",
+  longDescription:
+    "Authored a detailed system design blog breaking down Google Analytics architecture, including client-side event tracking, ingestion pipelines, stream processing, storage models, aggregation layers, and dashboard/reporting flows. Focused on scalability, data accuracy, and real-world trade-offs.",
+  technologies: [
+    "System Design",
+    "Event Tracking",
+    "Data Pipelines",
+    "Stream Processing",
+    "Analytics Architecture"
+  ],
+  features: [
+    "End-to-end analytics architecture",
+    "Event ingestion & processing flow",
+    "Scalable data storage strategy",
+    "Real-time & batch analytics concepts",
+    "Clear diagrams and explanations"
+  ],
+  notion: "https://www.notion.so/Google-Analyatics-2f792b8af6be8046abc1c107a907ed06?source=copy_link",
+  icon: <Code className="w-8 h-8" />,
+  category: "System Design",
+},
+
+    {
       title: "Chronicle Product TearDown",
       description:
         "A product analysis teardown of Chronicle (AI presentation tool) highlighting pain points and future improvements.",
