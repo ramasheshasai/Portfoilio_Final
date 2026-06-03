@@ -1,193 +1,210 @@
 import React from 'react';
-import { Code, Globe, Wrench, Brain, Users } from 'lucide-react';
+import { Code, Globe, Wrench, Brain, Users, Award, Trophy } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Programming Languages",
-      icon: <Code className="w-8 h-8 text-blue-600" />,
-      skills: [
-        { name: "C++", level: 90 },
-        { name: "C", level: 85 },
-        { name: "Java", level: 80 },
-        { name: "Python", level: 85 },
-        { name: "SQL", level: 75 }
-      ]
-    },
-    {
-      title: "Web Development",
-      icon: <Globe className="w-8 h-8 text-green-600" />,
-      skills: [
-        { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "React.js", level: 80 },
-        { name: "PHP", level: 75 },
-        { name: "MongoDB", level: 70 }
-      ]
-    },
-    {
-      title: "Frameworks & Tools",
-      icon: <Wrench className="w-8 h-8 text-purple-600" />,
-      skills: [
-        { name: "Tailwind CSS", level: 85 },
-        { name: "Bootstrap", level: 80 },
-        { name: "Flask", level: 75 },
-        { name: "Figma", level: 85 },
-        { name: "Jira", level: 80 }
-      ]
-    },
-    {
-      title: "Technical Skills",
-      icon: <Brain className="w-8 h-8 text-orange-600" />,
-      skills: [
-        { name: "Data Structures & Algorithms", level: 90 },
-        { name: "Object-Oriented Programming", level: 85 },
-        { name: "Database Design", level: 80 },
-        { name: "System Design", level: 75 },
-        { name: "Git/Version Control", level: 85 }
-      ]
-    },
-    {
-      title: "Product & Management",
-      icon: <Users className="w-8 h-8 text-teal-600" />,
-      skills: [
-        { name: "Product Management", level: 85 },
-        { name: "Agile Methodologies", level: 80 },
-        { name: "User Experience Design", level: 75 },
-        { name: "Project Management", level: 80 },
-        { name: "Team Leadership", level: 75 }
-      ]
-    }
-  ];
+const skillCategories = [
+  {
+    title: 'Programming Languages',
+    icon: <Code className="w-5 h-5" />,
+    color: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
+    skills: ['C++', 'C', 'Java', 'Python', 'SQL'],
+  },
+  {
+    title: 'Web Development',
+    icon: <Globe className="w-5 h-5" />,
+    color: 'text-teal-400 bg-teal-500/10 border-teal-500/20',
+    skills: ['HTML/CSS', 'JavaScript', 'React.js', 'Node.js', 'PHP', 'MongoDB'],
+  },
+  {
+    title: 'Frameworks & Tools',
+    icon: <Wrench className="w-5 h-5" />,
+    color: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
+    skills: ['Tailwind CSS', 'Bootstrap', 'Flask', 'Figma', 'Jira', 'Git'],
+  },
+  {
+    title: 'Technical Skills',
+    icon: <Brain className="w-5 h-5" />,
+    color: 'text-orange-400 bg-orange-500/10 border-orange-500/20',
+    skills: ['Data Structures & Algorithms', 'OOP', 'Database Design', 'System Design', 'REST APIs'],
+  },
+  {
+    title: 'Product & Management',
+    icon: <Users className="w-5 h-5" />,
+    color: 'text-green-400 bg-green-500/10 border-green-500/20',
+    skills: ['Product Management', 'Agile / Scrum', 'User Research', 'PRD Writing', 'Team Leadership'],
+  },
+];
 
-  const certifications = [
-    {
-      title: "Deloitte Data Analyst Virtual Internship",
-      issuer: "Deloitte Australia (Forage)",
-      date: "2025",
-      description: "Completed an industry-recognized internship focused on data analysis, visualization, and business insights using Excel and SQL."
-    },
-    {
-      title: "Oracle GenAI Virtual Internship",
-      issuer: "Oracle (AICTE Eduskills)",
-      date: "2025",
-      description: "Gained hands-on experience in generative AI concepts, prompt engineering, and AI-driven automation using Oracle Cloud Infrastructure."
-    },
-    {
-      title: "BITS Pilani Hackathon Winner",
-      issuer: "BITS Pilani, Hyderabad",
-      date: "March 2025",
-      description: "Winner at TechXcelerate for Cloudinary AI-based MERN project"
-    },
-    {
-      title: "Hack SRM Finalist",
-      issuer: "SRM University, AP",
-      date: "February 2025",
-      description: "Finalist in university-level hackathon competition"
-    },
-    {
-      title: "Python Programming",
-      issuer: "SWAYAM Platform",
-      date: "2024",
-      description: "Scored 76% in comprehensive Python programming course"
-    },
-    {
-      title: "E-Business",
-      issuer: "SWAYAM Platform",
-      date: "2024",
-      description: "Scored 75% in e-business fundamentals course"
-    }
-  ];
+const certifications = [
+  {
+    title: 'Deloitte Data Analyst Virtual Internship',
+    issuer: 'Deloitte Australia (Forage)',
+    date: '2025',
+    description: 'Data analysis, visualization, and business insights using Excel and SQL.',
+  },
+  {
+    title: 'Oracle GenAI Virtual Internship',
+    issuer: 'Oracle (AICTE Eduskills)',
+    date: '2025',
+    description: 'Generative AI, prompt engineering, and automation using Oracle Cloud.',
+  },
+  {
+    title: 'BITS Pilani Hackathon Winner',
+    issuer: 'BITS Pilani, Hyderabad',
+    date: 'March 2025',
+    description: 'Winner at TechXcelerate for Cloudinary AI-based MERN project.',
+  },
+  {
+    title: 'Hack SRM Finalist',
+    issuer: 'SRM University, AP',
+    date: 'February 2025',
+    description: 'Finalist in university-level hackathon competition.',
+  },
+  {
+    title: 'Python Programming',
+    issuer: 'SWAYAM Platform',
+    date: '2024',
+    description: 'Scored 76% in comprehensive Python programming course.',
+  },
+  {
+    title: 'E-Business',
+    issuer: 'SWAYAM Platform',
+    date: '2024',
+    description: 'Scored 75% in e-business fundamentals course.',
+  },
+];
 
-  return (
-    <section id="skills" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-2">
-            A comprehensive overview of my technical skills, tools, and certifications.
-          </p>
-        </div>
-
-        {/* Skills Grid */}
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow"
-            >
-              <div className="flex items-center mb-4 sm:mb-6">
-                <div className="p-2 sm:p-3 bg-gray-50 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
-                  {category.icon}
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
-                  {category.title}
-                </h3>
-              </div>
-
-              <div className="space-y-3 sm:space-y-4">
-                {category.skills.map((skill, idx) => (
-                  <div key={idx}>
-                    <div className="flex justify-between items-center mb-1 sm:mb-2">
-                      <span className="text-sm sm:text-base text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-gray-500 text-xs sm:text-sm">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 overflow-hidden">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-teal-500 h-1.5 sm:h-2 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Certifications & Achievements */}
-        <div className="grid lg:grid-cols-2 gap-4 sm:gap-4">
-          {certifications.map((cert, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-4 border-l-4 border-blue-600 hover:shadow-lg transition-shadow"
-            >
-              <h4 className="text-base font-bold text-gray-900 mb-1">{cert.title}</h4>
-              <p className="text-blue-600 font-semibold mb-1 text-sm">{cert.issuer}</p>
-              <p className="text-gray-500 text-xs mb-2">{cert.date}</p>
-              <p className="text-gray-700 text-sm leading-relaxed">{cert.description}</p>
-            </div>
-          ))}
-        </div>
-
-
-        {/* LeetCode Stats */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 sm:p-8 text-white text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Competitive Programming</h3>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
-            <div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">1434</div>
-              <div className="text-orange-100 text-sm sm:text-base">LeetCode Rating</div>
-            </div>
-            <div className="w-16 h-px sm:w-px sm:h-16 bg-orange-300"></div>
-            <div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">4056</div>
-              <div className="text-orange-100 text-sm sm:text-base">EAPCET Rank</div>
-            </div>
-          </div>
-          <a
-            href="https://leetcode.com/u/S_RAMA_SHESHA_SAI/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-white text-orange-600 rounded-lg font-semibold text-sm sm:text-base hover:bg-gray-50 transition-colors"
-          >
-            View LeetCode Profile
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
 };
+const chipItem = {
+  hidden: { opacity: 0, scale: 0.85 },
+  show:   { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+};
+
+const Skills = () => (
+  <section id="skills" className="py-16 sm:py-20 lg:py-24 bg-[#0d0d0d]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12 lg:mb-16"
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Skills & Expertise</h2>
+        <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
+        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
+          A comprehensive overview of my technical skills, tools, and certifications.
+        </p>
+      </motion.div>
+
+      {/* Skill tag grid */}
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 mb-14">
+        {skillCategories.map((cat, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+            className="glass-dark rounded-2xl p-5 hover:border-white/20 transition-colors"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className={`p-2 rounded-lg border ${cat.color}`}>{cat.icon}</div>
+              <h3 className="text-white font-semibold text-sm sm:text-base">{cat.title}</h3>
+            </div>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="flex flex-wrap gap-2"
+            >
+              {cat.skills.map((skill, j) => (
+                <motion.span
+                  key={j}
+                  variants={chipItem}
+                  className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-medium hover:border-blue-500/40 hover:text-blue-300 transition-colors cursor-default"
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Certifications */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-14"
+      >
+        <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">Certifications & Achievements</h3>
+        <div className="grid lg:grid-cols-2 gap-4">
+          {certifications.map((cert, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="glass-dark rounded-xl p-4 border-l-2 border-blue-500 hover:border-purple-500 transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <div className="p-1.5 rounded-lg bg-blue-500/10 text-blue-400 flex-shrink-0 mt-0.5">
+                  <Award className="w-4 h-4" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold text-sm">{cert.title}</h4>
+                  <p className="text-blue-400 text-xs font-medium mt-0.5">{cert.issuer}</p>
+                  <p className="text-gray-600 text-xs mt-0.5">{cert.date}</p>
+                  <p className="text-gray-500 text-xs mt-1.5 leading-relaxed">{cert.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* LeetCode banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="rounded-2xl bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/20 p-6 sm:p-8 text-center"
+      >
+        <Trophy className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+        <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">Competitive Programming</h3>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 mb-6">
+          <div>
+            <div className="text-3xl sm:text-4xl font-bold text-orange-400">1434</div>
+            <div className="text-gray-500 text-sm mt-1">LeetCode Rating</div>
+          </div>
+          <div className="w-12 h-px sm:w-px sm:h-12 bg-orange-500/30" />
+          <div>
+            <div className="text-3xl sm:text-4xl font-bold text-orange-400">4056</div>
+            <div className="text-gray-500 text-sm mt-1">EAPCET Rank</div>
+          </div>
+        </div>
+        <a
+          href="https://leetcode.com/u/S_RAMA_SHESHA_SAI/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500/20 border border-orange-500/30 text-orange-300 rounded-xl hover:bg-orange-500/30 font-semibold text-sm transition-colors"
+        >
+          View LeetCode Profile
+        </a>
+      </motion.div>
+
+    </div>
+  </section>
+);
 
 export default Skills;
