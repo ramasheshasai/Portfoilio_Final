@@ -10,10 +10,12 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import GlowCursor from './components/GlowCursor';
 
 function App() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      <GlowCursor />
       <Header />
       <Hero />
       <About />

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Award, Users, Code, Lightbulb } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 const highlights = [
   {
@@ -29,13 +29,6 @@ const highlights = [
   },
 ];
 
-const stats = [
-  { value: '9.17', label: 'CGPA',               color: 'text-blue-400' },
-  { value: '1434', label: 'LeetCode Rating',    color: 'text-purple-400' },
-  { value: '1000+', label: 'LinkedIn Connects', color: 'text-teal-400' },
-  { value: '3',     label: 'Internships',       color: 'text-orange-400' },
-];
-
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
@@ -45,11 +38,48 @@ const item = {
   show:   { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+// Animated counter that triggers once when scrolled into view
+const CountUpStat = ({
+  target, suffix = '', label, color, decimals = 0,
+}: {
+  target: number; suffix?: string; label: string; color: string; decimals?: number;
+}) => {
+  const [count, setCount] = useState(0);
+  const ref  = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    const duration = 1600;
+    const start    = Date.now();
+    const tick = () => {
+      const elapsed  = Date.now() - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased    = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      setCount(parseFloat((eased * target).toFixed(decimals)));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [inView, target, decimals]);
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={item}
+      className="glass-dark rounded-xl p-5 text-center hover:border-white/20 transition-colors"
+    >
+      <div className={`text-2xl sm:text-3xl font-bold mb-1 tabular-nums ${color}`}>
+        {count}{suffix}
+      </div>
+      <div className="text-gray-500 text-xs sm:text-sm">{label}</div>
+    </motion.div>
+  );
+};
+
 const About = () => (
   <section id="about" className="py-16 sm:py-20 lg:py-24 bg-[#0d0d0d]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -76,8 +106,9 @@ const About = () => (
           <div className="space-y-4 text-gray-400 text-sm sm:text-base leading-relaxed">
             <p>
               I'm <strong className="text-white">Satuluri Rama Shesha Sai</strong>, a final-year
-              Computer Science Engineering student at <strong className="text-white">SRM University-AP</strong> with
-              a CGPA of <strong className="text-blue-400">9.17</strong>. I blend technical depth with product
+              Computer Science Engineering student at{' '}
+              <strong className="text-white">SRM University-AP</strong> with a CGPA of{' '}
+              <strong className="text-blue-400">9.17</strong>. I blend technical depth with product
               thinking and cross-functional collaboration.
             </p>
             <p>
@@ -86,8 +117,8 @@ const About = () => (
               reflecting both versatility and curiosity.
             </p>
             <p>
-              I thrive in fast-paced environments and love turning ideas into impact. Actively seeking
-              opportunities to <strong className="text-white">build, learn, and innovate</strong>.
+              I thrive in fast-paced environments and love turning ideas into impact. Actively
+              seeking opportunities to <strong className="text-white">build, learn, and innovate</strong>.
             </p>
           </div>
         </motion.div>
@@ -114,7 +145,7 @@ const About = () => (
         </motion.div>
       </div>
 
-      {/* Stats */}
+      {/* Animated stats */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -122,16 +153,10 @@ const About = () => (
         viewport={{ once: true }}
         className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4"
       >
-        {stats.map((s, i) => (
-          <motion.div
-            key={i}
-            variants={item}
-            className="glass-dark rounded-xl p-5 text-center hover:border-white/20 transition-colors"
-          >
-            <div className={`text-2xl sm:text-3xl font-bold mb-1 ${s.color}`}>{s.value}</div>
-            <div className="text-gray-500 text-xs sm:text-sm">{s.label}</div>
-          </motion.div>
-        ))}
+        <CountUpStat target={9.17}  decimals={2} suffix=""   label="CGPA"               color="text-blue-400"   />
+        <CountUpStat target={1434}  decimals={0} suffix=""   label="LeetCode Rating"    color="text-purple-400" />
+        <CountUpStat target={1000}  decimals={0} suffix="+"  label="LinkedIn Connects"  color="text-teal-400"   />
+        <CountUpStat target={4}     decimals={0} suffix=""   label="Internships"        color="text-orange-400" />
       </motion.div>
 
     </div>
