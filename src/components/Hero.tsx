@@ -46,35 +46,62 @@ const Hero = () => {
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10 w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-8">
 
           {/* Profile photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="flex-shrink-0 order-first lg:order-last"
+            className="flex justify-center order-first lg:order-last"
           >
-            <div className="relative w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60">
-              {/* Spinning gradient ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 animate-spin-slow p-[3px]">
+            <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem]">
+
+              {/* Outermost slow-pulse ring */}
+              <div className="absolute -inset-4 rounded-full border border-blue-500/10 animate-pulse" />
+
+              {/* Outer dashed orbit ring */}
+              <div className="absolute -inset-2 rounded-full border border-dashed border-purple-500/20 animate-spin-slow" />
+
+              {/* Spinning gradient border */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-teal-400 animate-spin-slow p-[3px]">
                 <div className="w-full h-full rounded-full bg-[#0a0a0a]" />
               </div>
+
               {/* Photo */}
               <div className="absolute inset-[3px] rounded-full overflow-hidden">
                 <img
                   src={profilePhoto}
                   alt="Satuluri Rama Shesha Sai"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
-              {/* Outer glow */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 blur-2xl -z-10 scale-110" />
+
+              {/* Strong glow behind */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 blur-3xl -z-10 scale-125" />
+
+              {/* Floating badge — top right */}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/40 text-green-400 text-xs font-semibold backdrop-blur-sm whitespace-nowrap"
+              >
+                🟢 Open to Work
+              </motion.div>
+
+              {/* Floating badge — bottom left */}
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                className="absolute -bottom-3 -left-3 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300 text-xs font-semibold backdrop-blur-sm whitespace-nowrap"
+              >
+                ⭐ CGPA 9.17
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Text content */}
-          <div className="text-center lg:text-left flex-1">
+          <div className="text-center lg:text-left">
             <motion.p {...fadeUp(0)} className="text-blue-400 font-medium mb-2 text-sm tracking-[0.2em] uppercase">
               Hello, I'm
             </motion.p>
