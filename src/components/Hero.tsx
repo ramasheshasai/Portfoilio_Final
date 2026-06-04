@@ -111,7 +111,7 @@ const Hero = () => {
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
                 className="absolute -bottom-3 -left-3 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300 text-xs font-semibold backdrop-blur-sm whitespace-nowrap"
               >
-                ⭐ CGPA 9.17
+                ⭐ CGPA 9.16
               </motion.div>
             </div>
           </motion.div>
@@ -139,7 +139,7 @@ const Hero = () => {
               {...fadeUp(0.3)}
               className="text-gray-400 text-sm sm:text-base lg:text-lg mb-8 max-w-xl leading-relaxed"
             >
-              Final-year CSE at SRM University-AP · CGPA 9.17 · Passionate about building scalable,
+              CSE Graduate · SRM University-AP · CGPA 9.16 · Passionate about building scalable,
               user-focused products at the intersection of tech and design.
             </motion.p>
 

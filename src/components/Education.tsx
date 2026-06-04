@@ -8,13 +8,13 @@ const educationData = [
     institution: 'SRM University, AP',
     location: 'Amaravati, Andhra Pradesh',
     duration: 'October 2022 – 2026',
-    grade: 'CGPA: 9.17',
+    grade: 'CGPA: 9.16',
     status: 'Current',
     highlights: [
       'Member of Environment & Arts Clubs',
       'Organizer of Earth Day Rally 2023',
       'Volunteer for Aloha 2023',
-      'Consistent academic excellence (CGPA: 9.17)',
+      'Consistent academic excellence (CGPA: 9.16)',
     ],
   },
   {

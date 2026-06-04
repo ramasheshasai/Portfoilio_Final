@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Github, Database, Globe, Code, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import {
+  BookBazarThumb, ReadmeForgeThumb, NewsThumb, TaskFlowThumb,
+  ProdigyPMThumb, DevSyncThumb, ProdigyAnalysisThumb,
+  ChronicleTeardownThumb, NetflixSDThumb, GoogleAnalyticsSDThumb, YouTubeSDThumb,
+} from './ProjectThumbnails';
 
 const NotionIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg {...props} viewBox="0 0 100 100" fill="currentColor">
@@ -47,6 +52,7 @@ const projects = [
     github: 'https://github.com/ramasheshasai/book_bazar',
     icon: <Database className="w-6 h-6" />,
     category: 'Tech Stack',
+    thumbnail: <BookBazarThumb />,
   },
   {
     title: 'ReadmeForge',
@@ -57,6 +63,7 @@ const projects = [
     live: 'https://git-hub-readme-generator-pi.vercel.app/',
     icon: <Code className="w-6 h-6" />,
     category: 'Full Stack',
+    thumbnail: <ReadmeForgeThumb />,
   },
   {
     title: 'News Website',
@@ -66,6 +73,7 @@ const projects = [
     github: 'https://github.com/ramasheshasai/news_website',
     icon: <Globe className="w-6 h-6" />,
     category: 'Tech Stack',
+    thumbnail: <NewsThumb />,
   },
   {
     title: 'TaskFlow',
@@ -76,6 +84,7 @@ const projects = [
     live: 'https://task-flow-ten.vercel.app/',
     icon: <Code className="w-6 h-6" />,
     category: 'Tech Stack',
+    thumbnail: <TaskFlowThumb />,
   },
   {
     title: 'ProdigyPM',
@@ -86,6 +95,7 @@ const projects = [
     live: 'https://prodigy-pm.vercel.app/signup',
     icon: <Code className="w-6 h-6" />,
     category: 'Full Stack',
+    thumbnail: <ProdigyPMThumb />,
   },
   {
     title: 'DevSync-Arena',
@@ -95,6 +105,7 @@ const projects = [
     github: 'https://github.com/ramasheshasai/DevSync-Arena',
     icon: <Code className="w-6 h-6" />,
     category: 'Full Stack',
+    thumbnail: <DevSyncThumb />,
   },
   {
     title: 'ProdigyPM — Product Analysis',
@@ -105,6 +116,7 @@ const projects = [
     live: 'https://prodigy-pm.vercel.app/signup',
     icon: <Code className="w-6 h-6" />,
     category: 'Product Analysis',
+    thumbnail: <ProdigyAnalysisThumb />,
   },
   {
     title: 'Chronicle Product Teardown',
@@ -114,6 +126,7 @@ const projects = [
     github: 'https://github.com/ramasheshasai/product_teardown',
     icon: <Globe className="w-6 h-6" />,
     category: 'Product Analysis',
+    thumbnail: <ChronicleTeardownThumb />,
   },
   {
     title: 'Netflix — System Design',
@@ -123,6 +136,7 @@ const projects = [
     notion: 'https://www.notion.so/Netflix-2e092b8af6be8030800cc7409328a943?source=copy_link',
     icon: <Code className="w-6 h-6" />,
     category: 'System Design',
+    thumbnail: <NetflixSDThumb />,
   },
   {
     title: 'Google Analytics — System Design',
@@ -132,6 +146,7 @@ const projects = [
     notion: 'https://www.notion.so/Google-Analyatics-2f792b8af6be8046abc1c107a907ed06?source=copy_link',
     icon: <Code className="w-6 h-6" />,
     category: 'System Design',
+    thumbnail: <GoogleAnalyticsSDThumb />,
   },
   {
     title: 'YouTube — System Design Notes',
@@ -141,6 +156,7 @@ const projects = [
     notion: 'https://www.notion.so/Youtube-2e192b8af6be80689890ca2d635ec067?source=copy_link',
     icon: <Code className="w-6 h-6" />,
     category: 'System Design',
+    thumbnail: <YouTubeSDThumb />,
   },
 ];
 
@@ -201,6 +217,12 @@ const Projects = () => {
                 transition={{ delay: i * 0.07, duration: 0.4 }}
               >
                 <TiltCard className="glass-dark rounded-2xl p-5 hover:border-white/20 transition-colors duration-300 flex flex-col h-full">
+                  {/* Thumbnail */}
+                  {(project as any).thumbnail && (
+                    <div className="aspect-video -mx-5 -mt-5 mb-4 rounded-t-2xl overflow-hidden">
+                      {(project as any).thumbnail}
+                    </div>
+                  )}
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 text-blue-400">

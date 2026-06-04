@@ -67,8 +67,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-6 text-center">
-          <p className="text-gray-600 text-xs flex items-center justify-center gap-1">
+        <div className="border-t border-white/5 pt-8 text-center">
+          <p className="text-gray-500 text-sm italic mb-1">
+            "Built with curiosity, deployed with passion."
+          </p>
+          <p className="text-gray-700 text-xs flex items-center justify-center gap-1 mt-3">
             © {year} Satuluri Rama Shesha Sai. Made with <Heart className="w-3 h-3 text-red-500" /> and lots of code.
           </p>
         </div>

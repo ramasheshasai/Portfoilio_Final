@@ -6,6 +6,9 @@ const experiences = [
   {
     title: 'Software Engineering Intern',
     company: 'FourKites',
+    logo: '/logo-fourkites.png',
+    logoBg: 'bg-white',
+    current: true,
     location: 'Chennai, Tamil Nadu, India',
     duration: 'March 2026 – Present',
     type: 'On-site · Internship',
@@ -24,6 +27,9 @@ const experiences = [
   {
     title: 'Product Management Intern',
     company: 'Flam',
+    logo: '/logo-flam.png',
+    logoBg: 'bg-black',
+    current: false,
     location: 'Bengaluru, Karnataka, India',
     duration: 'June 2025 – Sept 2025',
     type: 'On-site · Paid',
@@ -41,6 +47,9 @@ const experiences = [
   {
     title: 'React.js Developer Intern',
     company: 'Celebal Technologies',
+    logo: '/logo-celebal.png',
+    logoBg: 'bg-transparent',
+    current: false,
     location: 'Remote',
     duration: 'June 2025 – August 2025',
     type: 'Remote · Internship',
@@ -58,6 +67,9 @@ const experiences = [
   {
     title: 'Web Developer Intern',
     company: 'Edunet Foundation',
+    logo: '/logo-edunet.png',
+    logoBg: 'bg-white',
+    current: false,
     location: 'Remote',
     duration: 'June 2024 – July 2024',
     type: 'Remote · Internship',
@@ -103,11 +115,32 @@ const Experience = () => (
           >
             {/* Header */}
             <div className="flex items-start justify-between mb-4 gap-2">
-              <div>
-                <h3 className="text-lg font-bold text-white leading-tight mb-1">{exp.title}</h3>
-                <p className="text-blue-400 font-semibold text-sm">{exp.company}</p>
+              <div className="flex items-start gap-3">
+                {/* Company logo */}
+                <div className={`w-10 h-10 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center p-1 ${exp.logoBg}`}>
+                  <img
+                    src={(exp as any).logo}
+                    alt={exp.company}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white leading-tight mb-0.5">{exp.title}</h3>
+                  <p className="text-blue-400 font-semibold text-sm">{exp.company}</p>
+                </div>
               </div>
-              <span className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${exp.dot}`} />
+              {/* Current role pulse / dot */}
+              {exp.current ? (
+                <div className="flex items-center gap-1.5 flex-shrink-0 mt-1">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
+                  </span>
+                  <span className="text-green-400 text-xs font-medium">Now</span>
+                </div>
+              ) : (
+                <span className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${exp.dot}`} />
+              )}
             </div>
 
             {/* Meta */}

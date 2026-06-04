@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,23 +11,29 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import GlowCursor from './components/GlowCursor';
+import SplashScreen from './components/SplashScreen';
 
 function App() {
+  const [splashDone, setSplashDone] = useState(false);
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
-      <GlowCursor />
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Research />
-      <Education />
-      <Contact />
-      <Footer />
-      <BackToTop />
-    </div>
+    <>
+      {!splashDone && <SplashScreen onComplete={() => setSplashDone(true)} />}
+      <div className="min-h-screen bg-[#0a0a0a]">
+        <GlowCursor />
+        <Header />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Research />
+        <Education />
+        <Contact />
+        <Footer />
+        <BackToTop />
+      </div>
+    </>
   );
 }
 

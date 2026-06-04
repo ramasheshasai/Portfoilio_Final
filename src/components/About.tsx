@@ -108,7 +108,7 @@ const About = () => (
               I'm <strong className="text-white">Satuluri Rama Shesha Sai</strong>, a final-year
               Computer Science Engineering student at{' '}
               <strong className="text-white">SRM University-AP</strong> with a CGPA of{' '}
-              <strong className="text-blue-400">9.17</strong>. I blend technical depth with product
+              <strong className="text-blue-400">9.16</strong>. I blend technical depth with product
               thinking and cross-functional collaboration.
             </p>
             <p>
@@ -153,7 +153,7 @@ const About = () => (
         viewport={{ once: true }}
         className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4"
       >
-        <CountUpStat target={9.17}  decimals={2} suffix=""   label="CGPA"               color="text-blue-400"   />
+        <CountUpStat target={9.16}  decimals={2} suffix=""   label="CGPA"               color="text-blue-400"   />
         <CountUpStat target={1434}  decimals={0} suffix=""   label="LeetCode Rating"    color="text-purple-400" />
         <CountUpStat target={1000}  decimals={0} suffix="+"  label="LinkedIn Connects"  color="text-teal-400"   />
         <CountUpStat target={4}     decimals={0} suffix=""   label="Internships"        color="text-orange-400" />
