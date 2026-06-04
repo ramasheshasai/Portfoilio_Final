@@ -110,7 +110,7 @@ const Research = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="grid sm:grid-cols-3 gap-4"
+        className="grid grid-cols-3 gap-3 sm:gap-4"
       >
         {interests.map((item, i) => (
           <div key={i} className="glass-dark rounded-xl p-5 text-center hover:border-white/20 transition-colors">

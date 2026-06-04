@@ -151,7 +151,7 @@ const About = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4"
+        className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4"
       >
         <CountUpStat target={9.17}  decimals={2} suffix=""   label="CGPA"               color="text-blue-400"   />
         <CountUpStat target={1434}  decimals={0} suffix=""   label="LeetCode Rating"    color="text-purple-400" />

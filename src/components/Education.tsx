@@ -80,7 +80,7 @@ const Education = () => (
 
       {/* Timeline */}
       <div className="relative">
-        <div className="absolute left-6 sm:left-8 lg:left-1/2 h-full w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent lg:-translate-x-px" />
+        <div className="absolute left-4 sm:left-6 lg:left-1/2 h-full w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent lg:-translate-x-px" />
 
         {educationData.map((edu, i) => (
           <motion.div
@@ -92,10 +92,10 @@ const Education = () => (
             className="relative mb-8 lg:mb-10"
           >
             {/* Dot */}
-            <div className="absolute left-4 sm:left-6 lg:left-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-[#0a0a0a] lg:-translate-x-1/2 shadow-lg shadow-blue-500/30" />
+            <div className="absolute left-2.5 sm:left-4 lg:left-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-[#0a0a0a] lg:-translate-x-1/2 shadow-lg shadow-blue-500/30" />
 
             {/* Card */}
-            <div className={`ml-12 sm:ml-16 lg:ml-0 lg:w-[46%] ${i % 2 === 0 ? 'lg:pr-10' : 'lg:ml-auto lg:pl-10'}`}>
+            <div className={`ml-8 sm:ml-12 lg:ml-0 lg:w-[46%] ${i % 2 === 0 ? 'lg:pr-10' : 'lg:ml-auto lg:pl-10'}`}>
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ type: 'spring', stiffness: 200 }}

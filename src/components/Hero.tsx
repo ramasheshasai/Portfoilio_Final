@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, ExternalLink, Mail, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SiDocker, SiTypescript, SiKubernetes, SiCplusplus } from 'react-icons/si';
 import profilePhoto from './IMG-20250911-WA0025.jpg';
 
 const ROLES = [
@@ -55,7 +56,7 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
             className="flex justify-center order-first lg:order-last"
           >
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem]">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-[28rem] lg:h-[28rem]">
 
               {/* Outermost slow-pulse ring */}
               <div className="absolute -inset-4 rounded-full border border-blue-500/10 animate-pulse" />
@@ -80,13 +81,28 @@ const Hero = () => {
               {/* Strong glow behind */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 blur-3xl -z-10 scale-125" />
 
-              {/* Floating badge — top right */}
+              {/* Floating tech stack row — top right */}
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/40 text-green-400 text-xs font-semibold backdrop-blur-sm whitespace-nowrap"
+                className="absolute -top-4 right-0 sm:-right-6 flex items-center gap-2 px-3 py-2 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-lg"
               >
-                🟢 Open to Work
+                {[
+                  { Icon: SiTypescript,  color: '#3178C6', label: 'TypeScript' },
+                  { Icon: SiDocker,      color: '#2496ED', label: 'Docker' },
+                  { Icon: SiKubernetes, color: '#326CE5', label: 'Kubernetes' },
+                  { Icon: SiCplusplus,  color: '#00599C', label: 'C++' },
+                ].map(({ Icon, color, label }) => (
+                  <motion.div
+                    key={label}
+                    whileHover={{ scale: 1.3 }}
+                    title={label}
+                    style={{ color, filter: `drop-shadow(0 0 6px ${color}88)` }}
+                    className="text-lg cursor-default"
+                  >
+                    <Icon />
+                  </motion.div>
+                ))}
               </motion.div>
 
               {/* Floating badge — bottom left */}
@@ -108,7 +124,7 @@ const Hero = () => {
 
             <motion.h1
               {...fadeUp(0.1)}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+              className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
             >
               Satuluri Rama<br />Shesha Sai
             </motion.h1>
