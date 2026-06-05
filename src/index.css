@@ -75,6 +75,36 @@
   50%       { transform: translateY(-10px); }
 }
 
+/* ── Aurora background blobs ── */
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+@keyframes aurora-drift1 {
+  0%, 100% { transform: translate(0px,   0px)   scale(1);    opacity: 0.55; }
+  25%       { transform: translate(120px, 80px)  scale(1.12); opacity: 0.7;  }
+  50%       { transform: translate(60px,  -80px) scale(0.92); opacity: 0.5;  }
+  75%       { transform: translate(-90px, 50px)  scale(1.08); opacity: 0.65; }
+}
+@keyframes aurora-drift2 {
+  0%, 100% { transform: translate(0px,    0px)    scale(1);    opacity: 0.5;  }
+  30%       { transform: translate(-130px, 100px) scale(1.1);  opacity: 0.65; }
+  60%       { transform: translate(80px,  -60px)  scale(0.95); opacity: 0.55; }
+}
+@keyframes aurora-drift3 {
+  0%, 100% { transform: translate(0px,   0px)   scale(1);    opacity: 0.45; }
+  40%       { transform: translate(100px, -90px) scale(1.15); opacity: 0.6;  }
+  70%       { transform: translate(-60px, 70px)  scale(0.9);  opacity: 0.5;  }
+}
+@keyframes aurora-drift4 {
+  0%, 100% { transform: translate(0px,    0px)   scale(1);    opacity: 0.4;  }
+  35%       { transform: translate(-80px, -80px) scale(1.08); opacity: 0.55; }
+  65%       { transform: translate(110px, 60px)  scale(0.92); opacity: 0.45; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar       { width: 6px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }

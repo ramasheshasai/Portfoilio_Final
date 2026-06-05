@@ -1,3 +1,4 @@
+import ScrambleText from './ScrambleText';
 import React from 'react';
 import { GraduationCap, Calendar, Award, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -61,7 +62,7 @@ const testScores = [
 ];
 
 const Education = () => (
-  <section id="education" className="py-16 sm:py-20 lg:py-24 bg-[#0a0a0a]">
+  <section id="education" className="py-16 sm:py-20 lg:py-24 bg-transparent">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <motion.div
@@ -71,7 +72,7 @@ const Education = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-12 lg:mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Education</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3"><ScrambleText text="Education" /></h2>
         <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
         <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
           My academic journey showcasing consistent excellence and active involvement.

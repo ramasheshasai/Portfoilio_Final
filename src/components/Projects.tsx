@@ -1,3 +1,4 @@
+import ScrambleText from './ScrambleText';
 import React, { useState } from 'react';
 import { Github, Database, Globe, Code, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
@@ -166,7 +167,7 @@ const Projects = () => {
   const filtered = projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-16 sm:py-20 lg:py-24 bg-[#0a0a0a]">
+    <section id="projects" className="py-16 sm:py-20 lg:py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <motion.div
@@ -176,7 +177,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 lg:mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Projects & Blogs</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3"><ScrambleText text="Projects & Blogs" /></h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
             A showcase of my technical work, product thinking, and system design explorations.

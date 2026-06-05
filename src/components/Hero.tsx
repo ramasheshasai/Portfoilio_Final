@@ -3,6 +3,7 @@ import { Github, Linkedin, ExternalLink, Mail, ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion';
 import { SiDocker, SiTypescript, SiKubernetes, SiCplusplus } from 'react-icons/si';
 import profilePhoto from './IMG-20250911-WA0025.jpg';
+import ParticleBackground from './ParticleBackground';
 
 const ROLES = [
   'Product Manager',
@@ -41,7 +42,10 @@ const Hero = () => {
   });
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-[#0a0a0a] pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-transparent pt-16 relative overflow-hidden">
+      {/* Particle constellation background */}
+      <ParticleBackground />
+
       {/* Ambient blobs */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -66,7 +70,7 @@ const Hero = () => {
 
               {/* Spinning gradient border */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-teal-400 animate-spin-slow p-[3px]">
-                <div className="w-full h-full rounded-full bg-[#0a0a0a]" />
+                <div className="w-full h-full rounded-full bg-transparent" />
               </div>
 
               {/* Photo */}

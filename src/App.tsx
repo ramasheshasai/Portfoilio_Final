@@ -13,6 +13,8 @@ import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import GlowCursor from './components/GlowCursor';
 import SplashScreen from './components/SplashScreen';
+import SideNav from './components/SideNav';
+import AuroraBackground from './components/AuroraBackground';
 
 function App() {
   const [splashDone, setSplashDone] = useState(false);
@@ -21,7 +23,9 @@ function App() {
     <MotionConfig reducedMotion="user">
       {!splashDone && <SplashScreen onComplete={() => setSplashDone(true)} />}
       <div className="min-h-screen bg-[#0a0a0a]">
+        <AuroraBackground />
         <GlowCursor />
+        <SideNav />
         <Header />
         <Hero />
         <About />
