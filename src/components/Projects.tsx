@@ -162,6 +162,7 @@ const projects = [
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('Full Stack');
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const filtered = projects.filter(p => p.category === activeCategory);
 
   return (
@@ -187,7 +188,7 @@ const Projects = () => {
           {categories.map(cat => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => { setActiveCategory(cat); setHoveredIndex(null); }}
               className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
                 activeCategory === cat
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
@@ -210,8 +211,14 @@ const Projects = () => {
             className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5"
           >
             {filtered.map((project, i) => (
-              <motion.div
+              <div
                 key={project.title}
+                className="transition-opacity duration-200"
+                style={{ opacity: hoveredIndex !== null && hoveredIndex !== i ? 0.35 : 1 }}
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+              <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.07, duration: 0.4 }}
@@ -277,6 +284,7 @@ const Projects = () => {
                   </div>
                 </TiltCard>
               </motion.div>
+              </div>
             ))}
           </motion.div>
         </AnimatePresence>

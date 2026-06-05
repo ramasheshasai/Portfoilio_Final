@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MotionConfig } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -17,7 +18,7 @@ function App() {
   const [splashDone, setSplashDone] = useState(false);
 
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       {!splashDone && <SplashScreen onComplete={() => setSplashDone(true)} />}
       <div className="min-h-screen bg-[#0a0a0a]">
         <GlowCursor />
@@ -33,7 +34,7 @@ function App() {
         <Footer />
         <BackToTop />
       </div>
-    </>
+    </MotionConfig>
   );
 }
 
