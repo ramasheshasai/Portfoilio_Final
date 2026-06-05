@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Award, Users, Code, Lightbulb } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
+import AnimatedDeveloper from './AnimatedDeveloper';
 
 const highlights = [
   {
@@ -123,27 +124,38 @@ const About = () => (
           </div>
         </motion.div>
 
-        {/* Highlight cards */}
+        {/* Animated developer illustration */}
         <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          transition={{ duration: 0.7 }}
+          className="flex items-center justify-center"
         >
-          {highlights.map((h, i) => (
-            <motion.div
-              key={i}
-              variants={item}
-              className={`p-5 rounded-xl border bg-gradient-to-br ${h.color} hover:scale-[1.02] transition-transform duration-300`}
-            >
-              <div className="mb-3">{h.icon}</div>
-              <h4 className="text-white font-semibold mb-1 text-sm sm:text-base">{h.title}</h4>
-              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{h.description}</p>
-            </motion.div>
-          ))}
+          <AnimatedDeveloper />
         </motion.div>
       </div>
+
+      {/* Highlight cards — full width below */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        {highlights.map((h, i) => (
+          <motion.div
+            key={i}
+            variants={item}
+            className={`p-5 rounded-xl border bg-gradient-to-br ${h.color} hover:scale-[1.02] transition-transform duration-300`}
+          >
+            <div className="mb-3">{h.icon}</div>
+            <h4 className="text-white font-semibold mb-1 text-sm sm:text-base">{h.title}</h4>
+            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{h.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
 
       {/* Animated stats */}
       <motion.div
