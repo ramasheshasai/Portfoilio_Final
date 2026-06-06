@@ -15,6 +15,7 @@ import GlowCursor from './components/GlowCursor';
 import SplashScreen from './components/SplashScreen';
 import SideNav from './components/SideNav';
 import AuroraBackground from './components/AuroraBackground';
+import NetworkTopology from './components/NetworkTopology';
 
 function App() {
   const [splashDone, setSplashDone] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       {!splashDone && <SplashScreen onComplete={() => setSplashDone(true)} />}
       <div className="min-h-screen bg-[#0a0a0a]">
         <AuroraBackground />
+        <NetworkTopology />
         <GlowCursor />
         <SideNav />
         <Header />

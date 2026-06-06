@@ -3,6 +3,33 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Award, Users, Code, Lightbulb } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import AnimatedDeveloper from './AnimatedDeveloper';
+import {
+  SiReact, SiNodedotjs, SiPython, SiTypescript, SiDocker, SiKubernetes,
+  SiMongodb, SiPostgresql, SiGit, SiTailwindcss, SiCplusplus, SiFlask,
+  SiFigma, SiJira, SiJavascript, SiHtml5, SiCss3,
+} from 'react-icons/si';
+
+const TECH_STACK = [
+  { Icon: SiReact,       label: 'React',       color: '#61DAFB' },
+  { Icon: SiNodedotjs,   label: 'Node.js',     color: '#339933' },
+  { Icon: SiPython,      label: 'Python',      color: '#3776AB' },
+  { Icon: SiTypescript,  label: 'TypeScript',  color: '#3178C6' },
+  { Icon: SiDocker,      label: 'Docker',      color: '#2496ED' },
+  { Icon: SiKubernetes,  label: 'Kubernetes',  color: '#326CE5' },
+  { Icon: SiMongodb,     label: 'MongoDB',     color: '#47A248' },
+  { Icon: SiPostgresql,  label: 'PostgreSQL',  color: '#4169E1' },
+  { Icon: SiGit,         label: 'Git',         color: '#F05032' },
+  { Icon: SiTailwindcss, label: 'Tailwind',    color: '#06B6D4' },
+  { Icon: SiCplusplus,   label: 'C++',         color: '#00599C' },
+  { Icon: SiFlask,       label: 'Flask',       color: '#aaaaaa' },
+  { Icon: SiFigma,       label: 'Figma',       color: '#F24E1E' },
+  { Icon: SiJira,        label: 'Jira',        color: '#0052CC' },
+  { Icon: SiJavascript,  label: 'JavaScript',  color: '#F7DF1E' },
+  { Icon: SiHtml5,       label: 'HTML5',       color: '#E34F26' },
+  { Icon: SiCss3,        label: 'CSS3',        color: '#1572B6' },
+];
+// duplicate for seamless loop
+const MARQUEE_ITEMS = [...TECH_STACK, ...TECH_STACK];
 
 const highlights = [
   {
@@ -170,6 +197,37 @@ const About = () => (
         <CountUpStat target={1434}  decimals={0} suffix=""   label="LeetCode Rating"    color="text-purple-400" />
         <CountUpStat target={1000}  decimals={0} suffix="+"  label="LinkedIn Connects"  color="text-teal-400"   />
         <CountUpStat target={4}     decimals={0} suffix=""   label="Internships"        color="text-orange-400" />
+      </motion.div>
+
+      {/* Tech Stack Marquee */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="mt-16"
+      >
+        <p className="text-center text-gray-600 text-xs tracking-[0.25em] uppercase mb-6">
+          Technologies I Work With
+        </p>
+        <div className="marquee-wrapper">
+          <div className="marquee-track">
+            {MARQUEE_ITEMS.map(({ Icon, label, color }, i) => (
+              <div
+                key={`${label}-${i}`}
+                className="flex items-center gap-2 mx-5 px-4 py-2.5 rounded-xl glass-dark hover:border-white/20 transition-all cursor-default group whitespace-nowrap"
+              >
+                <Icon
+                  style={{ color, filter: `drop-shadow(0 0 5px ${color}66)` }}
+                  className="w-5 h-5 group-hover:scale-110 transition-transform"
+                />
+                <span className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
     </div>

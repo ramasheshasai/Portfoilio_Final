@@ -1,8 +1,55 @@
 import ScrambleText from './ScrambleText';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Code, Globe, Wrench, Brain, Users, Award, Trophy } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import CodeRain from './CodeRain';
+
+const proficiencies = [
+  { label: 'C / C++',           pct: 88, color: 'from-blue-500 to-blue-400' },
+  { label: 'Python',            pct: 85, color: 'from-yellow-500 to-yellow-400' },
+  { label: 'JavaScript / TS',   pct: 90, color: 'from-amber-500 to-yellow-400' },
+  { label: 'React.js',          pct: 88, color: 'from-cyan-500 to-teal-400' },
+  { label: 'Node.js / Express', pct: 80, color: 'from-green-600 to-green-400' },
+  { label: 'Docker / K8s',      pct: 75, color: 'from-sky-600 to-blue-400' },
+  { label: 'SQL / MongoDB',     pct: 82, color: 'from-purple-500 to-violet-400' },
+  { label: 'Product Management',pct: 85, color: 'from-pink-500 to-rose-400' },
+];
+
+const SkillBar = ({ label, pct, color }: { label: string; pct: number; color: string }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+  return (
+    <div ref={ref} className="group">
+      <div className="flex justify-between items-center mb-1.5">
+        <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">{label}</span>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6 }}
+          className="text-gray-500 text-xs tabular-nums"
+        >
+          {pct}%
+        </motion.span>
+      </div>
+      <div className="h-2 rounded-full bg-white/5 border border-white/5 overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={inView ? { width: `${pct}%` } : {}}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          className={`h-full rounded-full bg-gradient-to-r ${color} relative overflow-hidden`}
+        >
+          {/* Shimmer sweep */}
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={inView ? { x: '200%' } : {}}
+            transition={{ duration: 1.5, delay: 0.8, ease: 'easeOut' }}
+            className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-[-12deg]"
+          />
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
 const skillCategories = [
   {
@@ -102,6 +149,22 @@ const Skills = () => (
         <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
           A comprehensive overview of my technical skills, tools, and certifications.
         </p>
+      </motion.div>
+
+      {/* Proficiency Bars */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="glass-dark rounded-2xl p-6 sm:p-8 mb-10 glow-card transition-all"
+      >
+        <h3 className="text-white font-semibold text-base sm:text-lg mb-6">Core Proficiencies</h3>
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
+          {proficiencies.map((s) => (
+            <SkillBar key={s.label} {...s} />
+          ))}
+        </div>
       </motion.div>
 
       {/* Skill tag grid */}

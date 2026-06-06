@@ -3,7 +3,6 @@ import { Github, Linkedin, ExternalLink, Mail, ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion';
 import { SiDocker, SiTypescript, SiKubernetes, SiCplusplus } from 'react-icons/si';
 import profilePhoto from './IMG-20250911-WA0025.jpg';
-import ParticleBackground from './ParticleBackground';
 
 const ROLES = [
   'Product Manager',
@@ -43,9 +42,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-transparent pt-16 relative overflow-hidden">
-      {/* Particle constellation background */}
-      <ParticleBackground />
-
       {/* Ambient blobs */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -122,7 +118,19 @@ const Hero = () => {
 
           {/* Text content */}
           <div className="text-center lg:text-left">
-            <motion.p {...fadeUp(0)} className="text-blue-400 font-medium mb-2 text-sm tracking-[0.2em] uppercase">
+            {/* Open to Work badge */}
+            <motion.div
+              {...fadeUp(0)}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4"
+            >
+              <span
+                className="w-2 h-2 rounded-full bg-emerald-400 avail-ring flex-shrink-0"
+                style={{ boxShadow: '0 0 0 0 rgba(52,211,153,0.5)' }}
+              />
+              Open to Work · Available for Opportunities
+            </motion.div>
+
+            <motion.p {...fadeUp(0.05)} className="text-blue-400 font-medium mb-2 text-sm tracking-[0.2em] uppercase">
               Hello, I'm
             </motion.p>
 
@@ -151,13 +159,13 @@ const Hero = () => {
             <motion.div {...fadeUp(0.4)} className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
               <a
                 href="#projects"
-                className="px-7 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity text-center text-sm sm:text-base"
+                className="btn-shimmer px-7 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:opacity-90 hover:scale-[1.03] active:scale-[0.98] transition-all text-center text-sm sm:text-base shadow-lg shadow-blue-500/25"
               >
                 View Projects
               </a>
-              <a
+<a
                 href="#contact"
-                className="px-7 py-3 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/5 transition-colors text-center text-sm sm:text-base"
+                className="px-7 py-3 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/5 hover:border-white/30 hover:scale-[1.03] active:scale-[0.98] transition-all text-center text-sm sm:text-base"
               >
                 Contact Me
               </a>

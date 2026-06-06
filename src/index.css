@@ -52,6 +52,76 @@
     background-clip: text;
   }
 
+  /* Animated gradient text */
+  .gradient-text-animated {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399, #60a5fa);
+    background-size: 300% 300%;
+    animation: gradient-flow 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shimmer button overlay */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    transform: skewX(-12deg);
+    animation: btn-shine 3s ease-in-out infinite;
+  }
+
+  /* Marquee ticker */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  .marquee-wrapper {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  /* Skill bar fill */
+  .skill-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #3b82f6, #7c3aed);
+    position: relative;
+    overflow: hidden;
+    transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .skill-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-12deg);
+    animation: btn-shine 2.5s ease-in-out infinite;
+  }
+
+  /* Glow border on hover cards */
+  .glow-card:hover {
+    box-shadow: 0 0 0 1px rgba(96,165,250,0.3), 0 8px 32px rgba(96,165,250,0.1), 0 0 80px rgba(167,139,250,0.05);
+  }
+
+  /* Available badge pulse ring */
+  .avail-ring {
+    animation: avail-pulse 2s ease-in-out infinite;
+  }
+
   @media (max-width: 640px) {
     button, a, input, textarea { min-height: 44px; }
     input, textarea, select { font-size: 16px; }
@@ -103,6 +173,29 @@
   0%, 100% { transform: translate(0px,    0px)   scale(1);    opacity: 0.4;  }
   35%       { transform: translate(-80px, -80px) scale(1.08); opacity: 0.55; }
   65%       { transform: translate(110px, 60px)  scale(0.92); opacity: 0.45; }
+}
+
+/* ── New keyframes ── */
+@keyframes gradient-flow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes btn-shine {
+  0%   { left: -60%; }
+  60%  { left: 120%; }
+  100% { left: 120%; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes avail-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(52,211,153,0); }
+}
+@keyframes skill-bar-in {
+  from { width: 0%; }
 }
 
 /* Scrollbar */
